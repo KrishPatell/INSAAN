@@ -30,7 +30,7 @@ export const SectionLeader: React.FC = () => {
               element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
           }}
-          className="border-2 border-insaan-black px-10 py-2 md:px-10 md:py-6 rounded-full text-[17px] md:text-base font-semibold tracking-widest hover:bg-insaan-black hover:text-white transition-all duration-300 uppercase whitespace-nowrap cursor-pointer flex flex-col justify-center items-center h-[11px]"
+          className="border-2 border-insaan-black px-10 h-[55px] md:h-auto md:px-10 md:py-6 rounded-full text-[17px] md:text-base font-semibold tracking-widest hover:bg-insaan-black hover:text-white transition-all duration-300 uppercase whitespace-nowrap cursor-pointer flex flex-col justify-center items-center"
         >
           Discover How
         </button>

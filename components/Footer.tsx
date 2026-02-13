@@ -62,8 +62,8 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-content mx-auto pt-10 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-6">
-        <div className="flex flex-col md:flex-row gap-2">
+      <div className="max-w-content mx-auto pt-10 border-t border-gray-800 flex flex-col md:flex-row justify-start md:justify-between items-center text-sm text-gray-500 gap-6">
+        <div className="flex flex-col md:flex-row gap-2 text-left md:text-center">
           <p>&copy; {new Date().getFullYear()} Insaan Global. All rights reserved.</p>
           <p>Built by <a href="https://blitzstudio.xyz" target="_blank" rel="noopener noreferrer" className="text-[#59CBE8] hover:text-white transition-colors">Blitz Studio</a></p>
         </div>
