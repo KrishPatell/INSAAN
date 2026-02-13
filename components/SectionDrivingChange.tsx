@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 const IMAGE_SOURCES = [
-  'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1000&q=80',
+  'https://octagonits.com/images/contract-staffing-services-222(1).png',
+  'https://rubiconstaffing.org/wp-content/uploads/2021/06/Staffing-Solutions.jpg ',
   'https://www.bluebixinc.com/services/images/Comprehensive-Staffing-Solutions.jpg',
-  'https://rubiconstaffing.org/wp-content/uploads/2021/06/Staffing-Solutions.jpg',
   'https://www.neeco.com/files/4644-employee-sourcing-and-workforce-management.jpg',
 ];
 
