@@ -33,7 +33,7 @@ export const SectionDrivingChange: React.FC = () => {
     <section id="services" className="w-full bg-insaan-black text-white py-32 md:py-40 scroll-mt-24">
       <div className="max-w-content mx-auto px-4 md:px-8">
 
-        <div className="flex flex-col md:flex-row justify-between items-end mb-28 gap-12 section-reveal">
+        <div className="flex flex-col md:flex-row justify-start md:justify-between items-end mb-[50px] md:mb-28 gap-12 section-reveal">
           <h2 className="text-[40px] md:text-7xl lg:text-[4.5rem] font-bold tracking-tightest leading-[0.92]">
             driving change<br />
             <span className="text-gray-500">with intelligence.</span>

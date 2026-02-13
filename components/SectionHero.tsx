@@ -13,7 +13,7 @@ export const SectionHero: React.FC = () => {
         <div className="absolute bottom-12 left-0 right-0 md:bottom-16 z-10">
           <div className="max-w-content mx-auto px-4 md:px-8">
             <div className="section-reveal section-reveal-delay-2">
-              <p className="text-white text-[22px] font-light leading-relaxed drop-shadow-lg opacity-95">
+              <p className="text-white text-[16px] md:text-[22px] font-light leading-relaxed drop-shadow-lg opacity-95">
                 finding the right people and putting them in<br />
                 the right place.
               </p>
