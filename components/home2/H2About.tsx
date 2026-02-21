@@ -6,12 +6,6 @@ interface H2AboutProps {
   onContactClick?: () => void;
 }
 
-const STATS = [
-  { value: '500+', label: 'Placements Annually' },
-  { value: '50+', label: 'Client Partners' },
-  { value: '10+', label: 'Industries Served' },
-];
-
 export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
   return (
     <section id="about" className="w-full py-28 md:py-40 scroll-mt-24">
@@ -77,10 +71,10 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
             </RevealOnScroll>
           </div>
 
-          {/* Right — Image + Stats */}
+          {/* Right — Image */}
           <div>
             <RevealOnScroll delay={200}>
-              <div className="rounded-3xl overflow-hidden mb-10">
+              <div className="rounded-3xl overflow-hidden">
                 <img
                   src={leaderOffice}
                   alt="Insaan Global office"
@@ -88,22 +82,6 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
                 />
               </div>
             </RevealOnScroll>
-
-            {/* Stats row */}
-            <div className="grid grid-cols-3 gap-6">
-              {STATS.map((stat, i) => (
-                <RevealOnScroll key={i} delay={350 + i * 80}>
-                  <div className="text-center md:text-left">
-                    <div className="text-3xl md:text-4xl font-bold text-insaan-black tracking-tight mb-1">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs md:text-sm text-insaan-black/40 font-medium tracking-wide">
-                      {stat.label}
-                    </div>
-                  </div>
-                </RevealOnScroll>
-              ))}
-            </div>
           </div>
         </div>
       </div>
