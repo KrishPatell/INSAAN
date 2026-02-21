@@ -60,10 +60,6 @@ export const H2Companies: React.FC = () => {
                     src={company.logo}
                     alt={`${company.name} logo`}
                     className="w-full max-w-[448px] md:max-w-[576px] object-contain"
-                    style={{ 
-                      mixBlendMode: 'multiply',
-                      filter: 'brightness(1.1) contrast(1.1)'
-                    }}
                   />
                 </div>
 
