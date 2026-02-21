@@ -28,7 +28,7 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
           {/* Left — Text */}
           <div>
             <RevealOnScroll delay={80}>
-              <h2 className="text-[32.436px] md:text-6xl lg:text-[3.86rem] font-bold text-insaan-black leading-[1] tracking-tightest mb-8">
+              <h2 className="text-[32.4px] md:text-6xl lg:text-[3.86rem] font-bold text-insaan-black leading-[1] tracking-tightest mb-8">
                 <span className="md:whitespace-nowrap">
                   Leader in{' '}
                   <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">

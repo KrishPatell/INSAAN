@@ -38,7 +38,7 @@ export const H2Services: React.FC = () => {
             <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-white/30 mb-5">
               What We Do
             </span>
-            <h2 className="text-[32.436px] md:text-6xl lg:text-[3.86rem] font-bold leading-[1] md:leading-[0.95] tracking-tightest max-w-4xl lg:max-w-5xl">
+            <h2 className="text-[32.4px] md:text-6xl lg:text-[3.86rem] font-bold leading-[1] md:leading-[0.95] tracking-tightest max-w-4xl lg:max-w-5xl">
               Building stronger teams through
               <br className="hidden lg:block" />
               {' '}<span className="text-[#59CBE8] md:whitespace-nowrap">smarter workforce strategy.</span>
