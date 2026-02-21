@@ -1,4 +1,5 @@
 import React from 'react';
+import { RevealOnScroll } from './RevealOnScroll';
 
 const INDUSTRIES = [
   'Healthcare',
@@ -17,7 +18,7 @@ export const H2Marquee: React.FC = () => {
   const items = [...INDUSTRIES, ...INDUSTRIES];
 
   return (
-    <section className="w-full bg-insaan-black py-6 md:py-7 overflow-hidden select-none">
+    <RevealOnScroll as="section" className="w-full bg-insaan-black py-6 md:py-7 overflow-hidden select-none">
       <div className="flex animate-marquee" style={{ width: 'max-content' }}>
         {items.map((industry, i) => (
           <React.Fragment key={i}>
@@ -28,6 +29,6 @@ export const H2Marquee: React.FC = () => {
           </React.Fragment>
         ))}
       </div>
-    </section>
+    </RevealOnScroll>
   );
 };

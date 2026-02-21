@@ -1,5 +1,6 @@
 import React from 'react';
 import { Logo } from '../Logo';
+import { RevealOnScroll } from './RevealOnScroll';
 
 interface H2FooterProps {
   onContactClick?: () => void;
@@ -19,7 +20,7 @@ export const H2Footer: React.FC<H2FooterProps> = ({ onContactClick }) => {
   };
 
   return (
-    <footer id="contact" className="w-full bg-black text-white scroll-mt-24">
+    <RevealOnScroll as="footer" id="contact" className="w-full bg-black text-white scroll-mt-24">
       {/* Main footer content */}
       <div className="max-w-content mx-auto px-4 md:px-8 pt-24 md:pt-32 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-14 md:gap-8 mb-20 md:mb-28">
@@ -155,6 +156,6 @@ export const H2Footer: React.FC<H2FooterProps> = ({ onContactClick }) => {
           </div>
         </div>
       </div>
-    </footer>
+    </RevealOnScroll>
   );
 };
