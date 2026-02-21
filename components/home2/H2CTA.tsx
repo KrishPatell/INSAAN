@@ -22,7 +22,7 @@ export const H2CTA: React.FC<H2CTAProps> = ({ onContactClick }) => {
               Get started
             </span>
 
-            <h2 className="text-[45px] md:text-5xl lg:text-[4rem] font-bold text-insaan-black leading-[1] md:leading-[0.95] tracking-tightest mb-4 w-full px-2 md:px-0 md:whitespace-nowrap">
+            <h2 className="text-[38.25px] md:text-5xl lg:text-[4rem] font-bold text-insaan-black leading-[1] md:leading-[0.95] tracking-tightest mb-4 w-full px-2 md:px-0 md:whitespace-nowrap">
               Looking for
               <br className="md:hidden" />
               {' '}<span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">your next role?</span>
