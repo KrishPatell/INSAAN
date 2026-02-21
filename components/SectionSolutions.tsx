@@ -31,7 +31,7 @@ export const SectionSolutions: React.FC = () => {
             key={index}
             className="border-2 border-insaan-black rounded-3xl p-6 md:p-8 bg-transparent hover:shadow-xl transition-all duration-300 flex flex-col h-full"
           >
-            <div className="flex items-center justify-center h-[150px] md:h-[220px] mb-6 flex-shrink-0">
+            <div className="flex items-center justify-center h-[150px] md:h-[220px] mb-6 flex-shrink-0 bg-white rounded-2xl p-4">
               <img
                 src={company.logo}
                 alt={`${company.name} logo`}
