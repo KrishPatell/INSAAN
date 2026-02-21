@@ -46,7 +46,7 @@ export const H2Services: React.FC = () => {
           </RevealOnScroll>
 
           <RevealOnScroll delay={120}>
-            <p className="max-w-md text-white/40 text-lg leading-relaxed lg:text-left">
+            <p className="max-w-md text-white/40 text-[16.2px] md:text-lg leading-relaxed lg:text-left">
               Redefining workforce solutions by integrating advanced data intelligence with a human-centered approach — combining precision analytics with genuine understanding to deliver stronger, more aligned talent outcomes.
             </p>
           </RevealOnScroll>
@@ -74,7 +74,7 @@ export const H2Services: React.FC = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-white/40 text-base md:text-lg leading-relaxed transition-colors duration-300 group-hover:text-white/55">
+                  <p className="text-white/40 text-[14.4px] md:text-lg leading-relaxed transition-colors duration-300 group-hover:text-white/55">
                     {service.description}
                   </p>
 

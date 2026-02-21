@@ -28,7 +28,7 @@ export const H2CTA: React.FC<H2CTAProps> = ({ onContactClick }) => {
               {' '}<span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">your next role?</span>
             </h2>
 
-            <p className="text-gray-600 text-[15px] md:text-lg leading-[1.4] md:leading-relaxed max-w-[650px] w-full px-0 mb-10">
+            <p className="text-gray-600 text-[13.5px] md:text-lg leading-[1.4] md:leading-relaxed max-w-[650px] w-full px-0 mb-10">
               Browse open positions and submit your information for contract, contract-to-direct, and direct hire opportunities across our network.
             </p>
 

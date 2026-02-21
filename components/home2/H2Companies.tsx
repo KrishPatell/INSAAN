@@ -68,7 +68,7 @@ export const H2Companies: React.FC = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-insaan-black/55 text-base md:text-lg leading-relaxed mb-8 flex-grow">
+                <p className="text-insaan-black/55 text-[14.4px] md:text-lg leading-relaxed mb-8 flex-grow">
                   {company.description}
                 </p>
 
@@ -94,7 +94,7 @@ export const H2Companies: React.FC = () => {
         {/* Bottom text */}
         <RevealOnScroll delay={400}>
           <div className="max-w-3xl">
-            <p className="text-insaan-black/50 text-lg md:text-xl leading-relaxed">
+            <p className="text-insaan-black/50 text-[16.2px] md:text-xl leading-relaxed">
               Each company under Insaan Global is purpose-built to identify, attract, and deploy
               exceptional individuals who create measurable value inside the organizations we serve.
             </p>

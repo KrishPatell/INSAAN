@@ -41,13 +41,13 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
             </RevealOnScroll>
 
             <RevealOnScroll delay={160}>
-              <p className="text-insaan-black/55 text-lg md:text-xl leading-relaxed mb-8">
+              <p className="text-insaan-black/55 text-[16.2px] md:text-xl leading-relaxed mb-8">
                 We are more than a traditional staffing and recruiting firm. Insaan Global — "Human Global" — is the parent company behind a portfolio of specialized workforce brands. We take the time to understand how your business operates and use that insight to guide workforce decisions aligned with your operational goals.
               </p>
             </RevealOnScroll>
 
             <RevealOnScroll delay={240}>
-              <p className="text-insaan-black/55 text-lg md:text-xl leading-relaxed mb-10">
+              <p className="text-insaan-black/55 text-[16.2px] md:text-xl leading-relaxed mb-10">
                 Each company under Insaan Global is purpose-built to identify, attract, and deploy exceptional talent. By focusing on how your organization functions day to day, we help ensure every hire supports performance, efficiency, and long-term growth.
               </p>
             </RevealOnScroll>
