@@ -35,7 +35,7 @@ export const H2CTA: React.FC<H2CTAProps> = ({ onContactClick }) => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={onContactClick}
-                className="inline-flex items-center gap-2 px-7 py-3.5 md:px-10 md:py-5 bg-insaan-black text-white rounded-2xl font-bold text-[13.5px] md:text-[15px] tracking-wide hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-7 py-3.5 md:px-10 md:py-5 bg-insaan-black text-white rounded-xl md:rounded-2xl font-bold text-[13.5px] md:text-[15px] tracking-wide hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Get in Touch
                 <svg className="w-4.5 h-4.5 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,8 +46,7 @@ export const H2CTA: React.FC<H2CTAProps> = ({ onContactClick }) => {
                 href="/company-presentation.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-7 py-3.5 md:px-8 md:py-4 border border-insaan-black/15 text-insaan-black text-[13.5px] md:text-[15px] font-bold rounded-2xl hover:border-insaan-black/30 hover:bg-insaan-black/5 transition-all duration-300 hover:-translate-y-0.5"
-                style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
+                className="inline-flex items-center justify-center px-7 py-3.5 md:px-8 md:py-4 border border-insaan-black/15 text-insaan-black text-[13.5px] md:text-[15px] font-bold rounded-xl md:rounded-2xl hover:border-insaan-black/30 hover:bg-insaan-black/5 transition-all duration-300 hover:-translate-y-0.5"
               >
                 View Presentation
               </a>
