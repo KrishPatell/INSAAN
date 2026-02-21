@@ -17,6 +17,8 @@ export const H2Hero: React.FC<H2HeroProps> = ({ onContactClick }) => {
       <div
         className="relative w-full aspect-[16/9] min-h-[100svh] md:min-h-[90svh] bg-cover bg-center bg-[#E0DDD5]"
         style={{ backgroundImage: `url(${heroWorldMap})` }}
+        role="img"
+        aria-label="World map background showing global workforce solutions"
       >
         {/* Subtle gradient orbs on top of map */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
