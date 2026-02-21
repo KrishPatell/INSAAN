@@ -6,7 +6,7 @@ const companies = [
   {
     name: 'Bettermint Healthcare',
     logo: bettermintLogo,
-    description: 'Effective staffing solutions for construction, engineering, aerospace, maintenance, and other critical industries — ensuring operations run efficiently, safely, and without disruption. Providing workforce support and opportunities for travel nurses and allied health professionals across diverse healthcare environments.',
+    description: 'Providing workforce support and opportunities for travel nurses and allied health professionals across diverse healthcare environments.',
     website: '#',
   },
   {

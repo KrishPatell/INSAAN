@@ -15,7 +15,7 @@ const COMPANIES = [
     name: 'CORETech',
     logo: coretechLogo,
     description:
-      'Effective staffing solutions for construction, engineering, aerospace, maintenance, and other critical industries — ensuring operations run efficiently, safely, and without disruption. Providing workforce support and opportunities for travel nurses and allied health professionals across diverse healthcare environments.',
+      'Providing workforce support and opportunities for travel nurses and allied health professionals across diverse healthcare environments.',
     accent: '#2CD5C4',
   },
 ];
