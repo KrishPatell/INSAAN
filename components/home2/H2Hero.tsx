@@ -68,7 +68,7 @@ export const H2Hero: React.FC<H2HeroProps> = ({ onContactClick }) => {
                 onClick={scrollToServices}
                 className="px-6 py-3 md:px-8 md:py-4 bg-insaan-black text-white text-[13.5px] md:text-[15px] font-bold rounded-xl md:rounded-2xl hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
-                Our Solutions
+                Our Companies
               </button>
               <button
                 onClick={() => onContactClick?.()}
