@@ -64,13 +64,13 @@ export const H2Hero: React.FC<H2HeroProps> = ({ onContactClick }) => {
             <div className="reveal is-visible flex flex-col sm:flex-row gap-4" style={{ transitionDelay: '300ms' }}>
               <button
                 onClick={scrollToServices}
-                className="px-8 py-4 bg-insaan-black text-white text-[15px] font-bold rounded-2xl hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="px-7 py-3.5 md:px-8 md:py-4 bg-insaan-black text-white text-[13.5px] md:text-[15px] font-bold rounded-2xl hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Our Solutions
               </button>
               <button
                 onClick={() => onContactClick?.()}
-                className="px-8 py-4 border-2 border-insaan-black/15 text-insaan-black text-[15px] font-bold rounded-2xl hover:border-insaan-black/40 bg-white/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
+                className="px-7 py-3.5 md:px-8 md:py-4 border-2 border-insaan-black/15 text-insaan-black text-[13.5px] md:text-[15px] font-bold rounded-2xl hover:border-insaan-black/40 bg-white/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
               >
                 Get in Touch
               </button>
