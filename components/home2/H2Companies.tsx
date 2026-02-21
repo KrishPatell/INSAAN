@@ -55,11 +55,11 @@ export const H2Companies: React.FC = () => {
                 />
 
                 {/* Logo */}
-                <div className="flex items-center justify-center h-[140px] md:h-[200px] mb-8 flex-shrink-0 bg-white rounded-2xl">
+                <div className="flex items-center justify-center h-[140px] md:h-[200px] mb-8 flex-shrink-0 bg-white rounded-2xl p-4">
                   <img
                     src={company.logo}
                     alt={`${company.name} logo`}
-                    className="w-full max-w-[448px] md:max-w-[576px] object-contain p-4"
+                    className="w-full max-w-[448px] md:max-w-[576px] object-contain"
                   />
                 </div>
 
