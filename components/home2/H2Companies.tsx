@@ -6,14 +6,14 @@ import bettermintLogo from '../../assets/bettermint-logo.png';
 const COMPANIES = [
   {
     name: 'Bettermint Healthcare',
-    logo: bettermintLogo,
+    logo: coretechLogo,
     description:
       'Effective staffing solutions for construction, engineering, aerospace, maintenance, and other critical industries — ensuring operations run efficiently, safely, and without disruption.',
     accent: '#59CBE8',
   },
   {
     name: 'CORETech',
-    logo: coretechLogo,
+    logo: bettermintLogo,
     description:
       'Providing workforce support and opportunities for travel nurses and allied health professionals across diverse healthcare environments.',
     accent: '#2CD5C4',
@@ -45,7 +45,14 @@ export const H2Companies: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-20">
           {COMPANIES.map((company, i) => (
             <RevealOnScroll key={i} delay={160 + i * 120}>
-              <div className="group relative bg-white rounded-3xl border border-insaan-black/[0.06] p-8 md:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-insaan-black/[0.04] hover:-translate-y-1 overflow-hidden h-full flex flex-col">
+              <div
+                className="group relative rounded-3xl border border-insaan-black/[0.06] p-8 md:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-insaan-black/[0.04] hover:-translate-y-1 overflow-hidden h-full flex flex-col"
+                style={{
+                  backgroundColor: '#FFFFFF',
+                  isolation: 'isolate',
+                  backgroundClip: 'padding-box',
+                }}
+              >
                 {/* Top accent line */}
                 <div
                   className="absolute top-0 left-0 right-0 h-[3px] transition-opacity duration-300 opacity-70 group-hover:opacity-100"
@@ -54,12 +61,20 @@ export const H2Companies: React.FC = () => {
                   }}
                 />
 
-                {/* Logo */}
-                <div className="flex items-center justify-center h-[140px] md:h-[200px] mb-8 flex-shrink-0 bg-white rounded-2xl p-4">
+                {/* Logo — pure white, isolated so page gradient doesn't blend through */}
+                <div
+                  className="company-logo-box flex items-center justify-center h-[140px] md:h-[200px] mb-8 flex-shrink-0 rounded-2xl p-4"
+                  style={{
+                    backgroundColor: '#FFFFFF',
+                    isolation: 'isolate',
+                    backgroundClip: 'padding-box',
+                  }}
+                >
                   <img
                     src={company.logo}
                     alt={`${company.name} logo`}
                     className="w-full max-w-[448px] md:max-w-[576px] object-contain"
+                    style={{ backgroundColor: 'transparent' }}
                   />
                 </div>
 

@@ -58,3 +58,10 @@
     animation: none;
   }
 }
+
+/* Force pure white logo areas so page gradient doesn't show through */
+#companies .company-logo-box {
+  background-color: #ffffff !important;
+  isolation: isolate;
+  background-clip: padding-box;
+}
