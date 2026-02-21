@@ -40,7 +40,7 @@ export const H2Hero: React.FC<H2HeroProps> = ({ onContactClick }) => {
 
             {/* Headline */}
             <div className="reveal is-visible mb-6 md:mb-8" style={{ transitionDelay: '100ms' }}>
-              <h1 className="text-[50px] md:text-[clamp(2.4rem,6vw,5.5rem)] font-bold leading-[1] tracking-tightest text-insaan-black">
+              <h1 className="text-[40px] md:text-[clamp(2.4rem,6vw,5.5rem)] font-bold leading-[1] tracking-tightest text-insaan-black">
                 The right{' '}
                 <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">
                   people
@@ -53,7 +53,7 @@ export const H2Hero: React.FC<H2HeroProps> = ({ onContactClick }) => {
 
             {/* Subtitle */}
             <div className="reveal is-visible" style={{ transitionDelay: '200ms' }}>
-              <p className="max-w-xl text-insaan-black/60 text-base md:text-lg leading-relaxed mb-8 md:mb-10 font-medium">
+              <p className="max-w-xl text-insaan-black/60 text-[14px] md:text-lg leading-relaxed mb-8 md:mb-10 font-medium">
                 Insaan Global delivers precision workforce solutions across healthcare,
                 engineering, construction, and energy — connecting exceptional talent
                 with organizations that move the world forward.
