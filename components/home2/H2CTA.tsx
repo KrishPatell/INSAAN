@@ -32,7 +32,7 @@ export const H2CTA: React.FC<H2CTAProps> = ({ onContactClick }) => {
               Browse open positions and submit your information for contract, contract-to-direct, and direct hire opportunities across our network.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-stretch">
               <button
                 onClick={onContactClick}
                 className="inline-flex items-center gap-2 px-7 py-3.5 md:px-10 md:py-5 bg-insaan-black text-white rounded-xl md:rounded-2xl font-bold text-[13.5px] md:text-[15px] tracking-wide hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"

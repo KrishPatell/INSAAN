@@ -20,17 +20,18 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
         {/* Two-column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left — Text */}
-          <div>
+          <div className="min-w-0">
             <RevealOnScroll delay={80}>
               <h2 className="text-[32.4px] md:text-6xl lg:text-[3.86rem] font-bold text-insaan-black leading-[1] tracking-tightest mb-8">
-                <span className="md:whitespace-nowrap">
-                  Leader in{' '}
-                  <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">
-                    workforce solutions
-                  </span>
+                Leader in{' '}
+                <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">workforce</span>
+                <br />
+                <span className="lg:whitespace-nowrap">
+                  <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">solutions</span>
+                  {' '}building
                 </span>
                 <br />
-                <span className="md:whitespace-nowrap">building stronger teams.</span>
+                <span className="block">stronger teams.</span>
               </h2>
             </RevealOnScroll>
 
@@ -48,7 +49,7 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
 
             {/* Pull quote accent */}
             <RevealOnScroll delay={300}>
-              <div className="border-l-[3px] border-[#59CBE8] pl-6 mb-12">
+              <div className="border-l-[3px] border-[#59CBE8] pl-6 mb-12 md:w-[614px]">
                 <p className="text-insaan-black text-xl md:text-2xl font-semibold leading-snug tracking-tight">
                   "Talent, when properly aligned, drives global impact."
                 </p>
