@@ -40,9 +40,6 @@ export const H2Features: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 md:mb-24">
           <RevealOnScroll>
-            <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-white/30 mb-5">
-              How We Deliver
-            </span>
             <h2 className="text-[32.4px] md:text-6xl lg:text-[4.2rem] font-bold leading-[1] md:leading-[0.95] tracking-tightest max-w-3xl">
               Precision at every{' '}
               <span className="text-[#59CBE8]">stage</span> of the process.
