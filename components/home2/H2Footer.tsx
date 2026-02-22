@@ -28,9 +28,7 @@ export const H2Footer: React.FC<H2FooterProps> = ({ onContactClick }) => {
           <div className="md:col-span-5">
             <Logo variant="light" />
             <p className="mt-6 text-white/35 max-w-sm text-[16px] leading-[1.8]">
-              We find the right people and put them in the right place. Insaan Global
-              is a leader in workforce solutions, building stronger teams through
-              smarter workforce strategy.
+              We identify the right talent and place them where they create the most value. Insaan Global delivers structured workforce solutions focused on strengthening teams and supporting operational performance across industries.
             </p>
           </div>
 

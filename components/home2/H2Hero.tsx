@@ -56,9 +56,7 @@ export const H2Hero: React.FC<H2HeroProps> = ({ onContactClick }) => {
             {/* Subtitle */}
             <div className="reveal is-visible" style={{ transitionDelay: '200ms' }}>
               <p className="max-w-xl text-insaan-black/60 text-[14px] md:text-lg leading-relaxed mb-8 md:mb-10 font-medium">
-                Insaan Global delivers precision workforce solutions across healthcare,
-                engineering, construction, and energy — connecting exceptional talent
-                with organizations that move the world forward.
+                Insaan Global delivers workforce solutions across healthcare, engineering, construction, energy, and other essential industries — grounded in the belief that finding strong talent should be simple, efficient, and instrumental in helping organizations move the world forward.
               </p>
             </div>
 

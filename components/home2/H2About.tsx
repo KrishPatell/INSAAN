@@ -35,13 +35,13 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
             </RevealOnScroll>
 
             <RevealOnScroll delay={160}>
-              <p className="text-insaan-black/55 text-[16.2px] md:text-xl leading-relaxed mb-8">
+              <p className="text-black text-[16.2px] md:text-xl leading-relaxed mb-8">
                 We are more than a traditional staffing and recruiting firm. Insaan Global — "Human Global" — is the parent company behind a portfolio of specialized workforce brands. We take the time to understand how your business operates and use that insight to guide workforce decisions aligned with your operational goals.
               </p>
             </RevealOnScroll>
 
             <RevealOnScroll delay={240}>
-              <p className="text-insaan-black/55 text-[16.2px] md:text-xl leading-relaxed mb-10">
+              <p className="text-black text-[16.2px] md:text-xl leading-relaxed mb-10">
                 Each company under Insaan Global is purpose-built to identify, attract, and deploy exceptional talent. By focusing on how your organization functions day to day, we help ensure every hire supports performance, efficiency, and long-term growth.
               </p>
             </RevealOnScroll>
@@ -62,7 +62,7 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
                 className="inline-flex items-center gap-3 text-insaan-black font-bold text-sm md:text-base group whitespace-nowrap"
               >
                 <span className="border-b-2 border-insaan-black/20 group-hover:border-insaan-black transition-colors pb-0.5">
-                  Start a Conversation
+                  Find Talent
                 </span>
                 <svg className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

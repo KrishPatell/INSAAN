@@ -10,7 +10,7 @@ const IMAGE_SOURCES = [
 
 const FEATURES = [
   {
-    title: 'Simple Recruiting',
+    title: 'Simple Staffing & Recruiting',
     description:
       'A focused, efficient approach to delivering contract, contract-to-direct, and direct hire talent — placing the right people where they create immediate impact.',
   },
@@ -51,8 +51,7 @@ export const H2Features: React.FC = () => {
 
           <RevealOnScroll delay={120}>
             <p className="max-w-md text-white/40 text-lg leading-relaxed lg:text-right">
-              Integrating advanced data intelligence with a human-centered
-              approach — combining precision analytics with genuine understanding.
+              Combining insight with a people-first approach — aligning experience with real understanding to make smarter workforce decisions.
             </p>
           </RevealOnScroll>
         </div>
@@ -120,13 +119,6 @@ export const H2Features: React.FC = () => {
                     {/* Tab header */}
                     <div className="p-6 md:p-8 flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <span
-                          className={`text-sm font-mono tracking-widest transition-colors duration-300 ${
-                            isActive ? 'text-[#59CBE8]' : 'text-white/25'
-                          }`}
-                        >
-                          0{index + 1}
-                        </span>
                         <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
                           {feature.title}
                         </h3>

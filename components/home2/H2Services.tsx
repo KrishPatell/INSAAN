@@ -47,7 +47,7 @@ export const H2Services: React.FC = () => {
 
           <RevealOnScroll delay={120}>
             <p className="max-w-md text-white/40 text-[16.2px] md:text-lg leading-relaxed lg:text-left">
-              Redefining workforce solutions by integrating advanced data intelligence with a human-centered approach — combining precision analytics with genuine understanding to deliver stronger, more aligned talent outcomes.
+              Delivering workforce solutions through a disciplined, people-first approach — taking the time to understand how organizations operate and what strong performance truly looks like. By combining practical insight with a genuine understanding of both client and candidate, we place talent that fits, performs, and contributes long after the initial placement.
             </p>
           </RevealOnScroll>
         </div>

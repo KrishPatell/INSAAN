@@ -8,7 +8,7 @@ const COMPANIES = [
     name: 'Bettermint Healthcare',
     logo: coretechLogo,
     description:
-      'Effective staffing solutions for construction, engineering, aerospace, maintenance, and other critical industries — ensuring operations run efficiently, safely, and without disruption.',
+      'Staffing solutions for construction, engineering, aerospace, maintenance, and other critical industries — supporting safe, consistent operations and the skilled teams that keep projects moving forward.',
     accent: '#59CBE8',
   },
   {
