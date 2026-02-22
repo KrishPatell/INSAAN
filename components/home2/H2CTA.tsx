@@ -35,7 +35,7 @@ export const H2CTA: React.FC<H2CTAProps> = ({ onContactClick }) => {
             <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-stretch">
               <button
                 onClick={onContactClick}
-                className="inline-flex items-center gap-2 px-7 py-3.5 md:px-10 md:py-5 bg-insaan-black text-white rounded-xl md:rounded-2xl font-bold text-[13.5px] md:text-[15px] tracking-wide hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 md:px-10 md:py-5 bg-insaan-black text-white rounded-xl md:rounded-2xl font-bold text-[13.5px] md:text-[15px] tracking-wide hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Get in Touch
                 <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
