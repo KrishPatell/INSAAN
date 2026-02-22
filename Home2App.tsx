@@ -21,9 +21,9 @@ export default function Home2App() {
       <H2Hero onContactClick={openModal} />
       <H2Marquee />
       <H2About onContactClick={openModal} />
-      <H2Features />
-      <H2Companies />
       <H2Services />
+      <H2Companies />
+      <H2Features />
       <H2CTA onContactClick={openModal} />
       <H2Footer onContactClick={openModal} />
       <ContactModal isOpen={isModalOpen} onClose={closeModal} />
