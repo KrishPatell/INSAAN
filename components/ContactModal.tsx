@@ -121,7 +121,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
           {/* Type */}
           <div>
             <label htmlFor="type" className="block text-sm font-semibold text-gray-700 mb-1.5 md:mb-2">
-              I am interested in
+              I am an...
             </label>
             <select
               id="type"
@@ -131,11 +131,8 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-insaan-black focus:ring-2 focus:ring-insaan-black/20 outline-none transition-all text-base md:text-lg bg-white"
             >
               <option value="">Select an option</option>
-              <option value="Healthcare Staffing">Healthcare Staffing</option>
-              <option value="Engineering & Technology">Engineering & Technology</option>
-              <option value="Construction & Infrastructure">Construction & Infrastructure</option>
-              <option value="Energy & Aerospace">Energy & Aerospace</option>
-              <option value="Other">Other</option>
+              <option value="employer">I'm an Employer</option>
+              <option value="jobseeker">I'm a Job Seeker</option>
             </select>
             <ValidationError prefix="Type" field="type" errors={state.errors} />
           </div>
