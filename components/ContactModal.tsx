@@ -1,8 +1,5 @@
 import React from 'react';
-
-// Same-origin API: /api/contact (Vercel). Override with VITE_CONTACT_API_URL (e.g. Google Apps Script URL) for a different backend.
-const CONTACT_API_BASE = (import.meta as unknown as { env?: { VITE_CONTACT_API_URL?: string } }).env?.VITE_CONTACT_API_URL ?? '';
-const CONTACT_ENDPOINT = CONTACT_API_BASE ? CONTACT_API_BASE.replace(/\/$/, '') : '/api/contact';
+import { useForm, ValidationError } from '@formspree/react';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -17,59 +14,44 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
     type: '',
   });
   const [isSubmitted, setIsSubmitted] = React.useState(false);
-  const [submitting, setSubmitting] = React.useState(false);
-  const [error, setError] = React.useState<string | null>(null);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setError(null);
-  };
+  const [state, handleSubmit] = useForm("xgolpvnb");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setError(null);
-    try {
-      const res = await fetch(CONTACT_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          type: formData.type,
-        }),
-      });
-      const data = (await res.json()) as { success?: boolean; error?: string };
-      if (!res.ok) {
-        throw new Error(data?.error || 'Something went wrong');
-      }
-      if (data.success !== true) {
-        throw new Error(data?.error || 'Something went wrong');
-      }
+  React.useEffect(() => {
+    if (state.succeeded) {
       setIsSubmitted(true);
-      setFormData({ name: '', phone: '', email: '', type: '' });
       setTimeout(() => {
         setIsSubmitted(false);
+        setFormData({ name: '', phone: '', email: '', type: '' });
         onClose();
       }, 2000);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to send. Try again.');
-    } finally {
-      setSubmitting(false);
     }
-  };
+  }, [state.succeeded, onClose]);
 
   if (!isOpen) return null;
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+      {/* Backdrop */}
+      <div 
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      
+      {/* Modal */}
       <div className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden animate-[scaleIn_0.3s_ease-out] max-h-[80vh] md:max-h-[90vh] overflow-y-auto my-2 md:my-4 mx-2">
+        {/* Header */}
         <div className="bg-insaan-black px-4 md:px-8 py-3 md:py-6 sticky top-0 z-10">
           <div className="flex items-center justify-between gap-2">
             <h3 className="text-lg md:text-2xl font-bold text-white shrink-0">Get in Touch</h3>
-            <button
+            <button 
               onClick={onClose}
               className="w-14 h-14 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shrink-0"
             >
@@ -81,9 +63,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
           <p className="text-gray-400 mt-2 text-sm">Fill out the form below and we'll get back to you</p>
         </div>
 
+        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5 p-4 md:p-8">
+          {/* Name */}
           <div>
-            <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1.5 md:mb-2">Full Name</label>
+            <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1.5 md:mb-2">
+              Full Name
+            </label>
             <input
               id="name"
               type="text"
@@ -94,9 +80,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-insaan-black focus:ring-2 focus:ring-insaan-black/20 outline-none transition-all text-base md:text-lg"
               placeholder="John Doe"
             />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
+
+          {/* Phone */}
           <div>
-            <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1.5 md:mb-2">Phone Number</label>
+            <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1.5 md:mb-2">
+              Phone Number
+            </label>
             <input
               id="phone"
               type="tel"
@@ -106,9 +97,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-insaan-black focus:ring-2 focus:ring-insaan-black/20 outline-none transition-all text-base md:text-lg"
               placeholder="+1 (555) 000-0000"
             />
+            <ValidationError prefix="Phone" field="phone" errors={state.errors} />
           </div>
+
+          {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1.5 md:mb-2">Email Address</label>
+            <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1.5 md:mb-2">
+              Email Address
+            </label>
             <input
               id="email"
               type="email"
@@ -119,9 +115,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-insaan-black focus:ring-2 focus:ring-insaan-black/20 outline-none transition-all text-base md:text-lg"
               placeholder="john@example.com"
             />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
           </div>
+
+          {/* Type */}
           <div>
-            <label htmlFor="type" className="block text-sm font-semibold text-gray-700 mb-1.5 md:mb-2">I am an...</label>
+            <label htmlFor="type" className="block text-sm font-semibold text-gray-700 mb-1.5 md:mb-2">
+              I am an...
+            </label>
             <select
               id="type"
               name="type"
@@ -133,14 +134,16 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               <option value="employer">I'm an Employer</option>
               <option value="jobseeker">I'm a Job Seeker</option>
             </select>
+            <ValidationError prefix="Type" field="type" errors={state.errors} />
           </div>
-          {error && <p className="text-red-600 text-sm">{error}</p>}
+
+          {/* Submit */}
           <button
             type="submit"
-            disabled={submitting}
-            className="w-full py-3 md:py-4 bg-insaan-black text-white text-base md:text-lg font-bold rounded-xl hover:bg-insaan-black/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-70"
+            disabled={state.submitting}
+            className="w-full py-3 md:py-4 bg-insaan-black text-white text-base md:text-lg font-bold rounded-xl hover:bg-insaan-black/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            {submitting ? 'Sending...' : isSubmitted ? 'Sent!' : 'Send Message'}
+            {state.submitting ? 'Sending...' : isSubmitted ? 'Sent!' : 'Send Message'}
           </button>
         </form>
 
@@ -158,10 +161,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
           </div>
         )}
       </div>
+
       <style>{`
         @keyframes scaleIn {
-          from { opacity: 0; transform: scale(0.95); }
-          to { opacity: 1; transform: scale(1); }
+          from {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
         }
       `}</style>
     </div>
