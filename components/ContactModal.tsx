@@ -31,6 +31,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
       formDataToSend.append('subject', 'Insaan Global Form Submission');
       formDataToSend.append('from_name', 'Insaan Global');
       formDataToSend.append('email_to', 'Info@insaanglobal.com,hi@kpatel.xyz');
+      formDataToSend.append('redirect', 'false');
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
