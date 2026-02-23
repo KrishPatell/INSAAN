@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Companies', href: '#companies' },
+  { label: 'Industries', href: '#industries' },
 ];
 
 export const H2Navbar: React.FC<H2NavbarProps> = ({ onContactClick }) => {

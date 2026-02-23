@@ -35,7 +35,7 @@ export const H2Features: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="w-full bg-insaan-black text-white py-28 md:py-40">
+    <section id="services" className="w-full bg-insaan-black text-white py-28 md:py-40 scroll-mt-24">
       <div className="max-w-content mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 md:mb-24">
