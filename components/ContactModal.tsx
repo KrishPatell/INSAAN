@@ -22,7 +22,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
     setIsLoading(true);
     
     try {
-      const response = await fetch('https://formspree.io/f/mjgeeoow', {
+      const response = await fetch('https://api.web3forms.com/submit?access_key=8976db2b-e88a-44ca-9cb9-924dd30b7720&email_to=Info@insaanglobal.com,hi@kpatel.xyz', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
