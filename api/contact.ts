@@ -2,9 +2,11 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// One or more recipients: set CONTACT_EMAILS (comma-separated) or single CONTACT_EMAIL
+// Recipients: CONTACT_EMAILS (comma-separated) or CONTACT_EMAIL, or default below
+const DEFAULT_CONTACT_EMAILS = 'Info@insaanglobal.com,hi@kpatel.xyz';
+
 const getToEmails = (): string[] => {
-  const list = process.env.CONTACT_EMAILS || process.env.CONTACT_EMAIL || '';
+  const list = process.env.CONTACT_EMAILS || process.env.CONTACT_EMAIL || DEFAULT_CONTACT_EMAILS;
   if (!list.trim()) return [];
   return list.split(',').map((e) => e.trim()).filter(Boolean);
 };
