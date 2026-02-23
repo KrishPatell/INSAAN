@@ -22,17 +22,19 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
     setIsLoading(true);
     
     try {
-      const response = await fetch('https://api.web3forms.com/submit?access_key=8976db2b-e88a-44ca-9cb9-924dd30b7720&email_to=Info@insaanglobal.com,hi@kpatel.xyz&subject=Insaan Global Form Submission&from_name=Insaan Global', {
+      const formDataToSend = new FormData();
+      formDataToSend.append('access_key', '8976db2b-e88a-44ca-9cb9-924dd30b7720');
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('type', formData.type);
+      formDataToSend.append('subject', 'Insaan Global Form Submission');
+      formDataToSend.append('from_name', 'Insaan Global');
+      formDataToSend.append('email_to', 'Info@insaanglobal.com,hi@kpatel.xyz');
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          type: formData.type,
-        }),
+        body: formDataToSend,
       });
 
       if (response.ok) {
