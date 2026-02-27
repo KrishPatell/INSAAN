@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /companies
+Allow: /solutions
+Allow: /contact
+
+# Sitemap
+Sitemap: https://www.insaanglobal.com/sitemap.xml
+
+# Disallow private areas
+Disallow: /api/
+Disallow: /_*
