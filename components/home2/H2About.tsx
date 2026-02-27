@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { RevealOnScroll } from './RevealOnScroll';
 import leaderOffice from '../../assets/leader-office.png';
 
@@ -58,8 +59,8 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
 
             {/* CTA */}
             <RevealOnScroll delay={360}>
-              <button
-                onClick={onContactClick}
+              <Link
+                to="/solutions"
                 className="inline-flex items-center gap-3 text-insaan-black font-bold text-sm md:text-base group whitespace-nowrap"
               >
                 <span className="border-b-2 border-insaan-black/20 group-hover:border-insaan-black transition-colors pb-0.5">
@@ -68,7 +69,7 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
                 <svg className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
+              </Link>
             </RevealOnScroll>
           </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import heroWorldMap from '../../assets/hero-world-map.webp';
 
 interface H2HeroProps {
@@ -6,10 +7,6 @@ interface H2HeroProps {
 }
 
 export const H2Hero: React.FC<H2HeroProps> = ({ onContactClick }) => {
-  const scrollToServices = () => {
-    const el = document.querySelector('#services');
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
 
   return (
     <section className="relative w-full flex flex-col overflow-hidden">
@@ -62,12 +59,12 @@ export const H2Hero: React.FC<H2HeroProps> = ({ onContactClick }) => {
 
             {/* CTAs */}
             <div className="reveal is-visible flex flex-col sm:flex-row gap-[15px] md:gap-4" style={{ transitionDelay: '300ms' }}>
-              <button
-                onClick={scrollToServices}
-                className="px-6 py-3 md:px-8 md:py-4 bg-insaan-black text-white text-[13.5px] md:text-[15px] font-bold rounded-xl md:rounded-2xl hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              <Link
+                to="/companies"
+                className="px-6 py-3 md:px-8 md:py-4 bg-insaan-black text-white text-[13.5px] md:text-[15px] font-bold rounded-xl md:rounded-2xl hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 inline-flex items-center justify-center"
               >
                 Our Companies
-              </button>
+              </Link>
               <button
                 onClick={() => onContactClick?.()}
                 className="px-6 py-3 md:px-8 md:py-4 border-2 border-insaan-black/15 text-insaan-black text-[13.5px] md:text-[15px] font-bold rounded-xl md:rounded-2xl hover:border-insaan-black/40 bg-white/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"

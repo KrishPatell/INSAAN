@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["/tmp/insaan-app/node_modules/vite/bin/vite.js", "--root", "/tmp/insaan-app"],
+      "port": 5173,
+      "autoPort": true
+    },
+    {
+      "name": "preview",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["--norc", "--noprofile", "-c", "cd '/Users/krishpatel/Downloads/INSAAN-main 2' && exec '/Users/krishpatel/Downloads/INSAAN-main 2/node_modules/.bin/vite' preview"],
+      "port": 4173
+    }
+  ]
+}

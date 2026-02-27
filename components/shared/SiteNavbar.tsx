@@ -9,6 +9,7 @@ interface SiteNavbarProps {
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
+  { label: 'Services', to: '#services', isAnchor: true },
   { label: 'Companies', to: '/companies' },
   { label: 'Solutions', to: '/solutions' },
 ];
@@ -17,6 +18,7 @@ export const SiteNavbar: React.FC<SiteNavbarProps> = ({ onContactClick }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -33,9 +35,52 @@ export const SiteNavbar: React.FC<SiteNavbarProps> = ({ onContactClick }) => {
     setMobileOpen(false);
   }, [location.pathname]);
 
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (href.startsWith('#')) {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const isActive = (to: string) => {
     if (to === '/') return location.pathname === '/';
+    if (to.startsWith('#')) return false;
     return location.pathname.startsWith(to);
+  };
+
+  const renderLink = (link: typeof NAV_LINKS[0], isMobile = false) => {
+    const active = isActive(link.to);
+    const className = isMobile
+      ? `animate-menu-slide-in text-4xl font-bold tracking-tight py-3 ${active ? 'text-[#59CBE8]' : 'text-insaan-black'}`
+      : `text-[15px] font-semibold transition-colors duration-200 ${active ? 'text-[#59CBE8]' : 'text-insaan-black hover:text-insaan-black/80'}`;
+
+    if (link.isAnchor && isHomePage) {
+      // Anchor link on homepage - scroll to section
+      return (
+        <a
+          key={link.to}
+          href={link.to}
+          onClick={(e) => handleAnchorClick(e, link.to)}
+          className={className}
+          style={isMobile ? { animationDelay: `${NAV_LINKS.indexOf(link) * 60}ms` } : undefined}
+        >
+          {link.label}
+        </a>
+      );
+    }
+
+    // Page link
+    return (
+      <Link
+        key={link.to}
+        to={link.to}
+        className={className}
+        style={isMobile ? { animationDelay: `${NAV_LINKS.indexOf(link) * 60}ms` } : undefined}
+      >
+        {link.label}
+      </Link>
+    );
   };
 
   return (
@@ -54,19 +99,7 @@ export const SiteNavbar: React.FC<SiteNavbarProps> = ({ onContactClick }) => {
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-10">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`text-[15px] font-semibold transition-colors duration-200 ${
-                  isActive(link.to)
-                    ? 'text-[#59CBE8]'
-                    : 'text-insaan-black hover:text-insaan-black/80'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => renderLink(link))}
             <Link
               to="/contact"
               className={`text-[15px] font-semibold transition-colors duration-200 ${
@@ -104,18 +137,7 @@ export const SiteNavbar: React.FC<SiteNavbarProps> = ({ onContactClick }) => {
       {mobileOpen && (
         <div role="dialog" aria-modal="true" aria-label="Navigation menu" className="fixed inset-0 z-40 bg-insaan-bg flex flex-col pt-24 px-8 pb-12">
           <div className="flex-1 flex flex-col justify-center gap-2">
-            {NAV_LINKS.map((link, i) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`animate-menu-slide-in text-4xl font-bold tracking-tight py-3 ${
-                  isActive(link.to) ? 'text-[#59CBE8]' : 'text-insaan-black'
-                }`}
-                style={{ animationDelay: `${i * 60}ms` }}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => renderLink(link, true))}
             <Link
               to="/contact"
               className={`animate-menu-slide-in text-4xl font-bold tracking-tight py-3 ${

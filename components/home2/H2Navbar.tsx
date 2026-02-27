@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Logo } from '../Logo';
 
 interface H2NavbarProps {
@@ -6,16 +7,17 @@ interface H2NavbarProps {
 }
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#' },
-  { label: 'About', href: '#about' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
   { label: 'Services', href: '#services' },
-  { label: 'Companies', href: '#companies' },
-  { label: 'Industries', href: '#industries' },
+  { label: 'Companies', href: '/companies' },
 ];
 
 export const H2Navbar: React.FC<H2NavbarProps> = ({ onContactClick }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -29,14 +31,47 @@ export const H2Navbar: React.FC<H2NavbarProps> = ({ onContactClick }) => {
   }, [mobileOpen]);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Don't prevent default for page links
+    if (href.startsWith('/')) return;
     e.preventDefault();
     setMobileOpen(false);
-    if (href === '#') {
+    if (href === '#' || href === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       const el = document.querySelector(href);
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const renderLink = (link: typeof NAV_LINKS[0], isMobile = false) => {
+    const isPageLink = link.href.startsWith('/');
+    const className = isMobile 
+      ? `animate-menu-slide-in text-4xl font-bold tracking-tight py-3 ${isPageLink ? '' : 'text-insaan-black'}`
+      : 'text-[15px] font-semibold text-insaan-black hover:text-insaan-black/80 transition-colors duration-200';
+
+    if (isPageLink) {
+      return (
+        <Link
+          key={link.href}
+          to={link.href}
+          className={className}
+          onClick={() => setMobileOpen(false)}
+        >
+          {link.label}
+        </Link>
+      );
+    }
+    return (
+      <a
+        key={link.href}
+        href={link.href}
+        onClick={(e) => handleNavClick(e, link.href)}
+        className={className}
+        style={isMobile ? { animationDelay: `${NAV_LINKS.indexOf(link) * 60}ms` } : undefined}
+      >
+        {link.label}
+      </a>
+    );
   };
 
   return (
@@ -50,22 +85,13 @@ export const H2Navbar: React.FC<H2NavbarProps> = ({ onContactClick }) => {
       >
         <div className="max-w-content mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" onClick={(e) => handleNavClick(e, '#')} className="shrink-0">
+          <Link to="/" className="shrink-0">
             <Logo variant="dark" />
-          </a>
+          </Link>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-10">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="text-[15px] font-semibold text-insaan-black hover:text-insaan-black/80 transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
+            {NAV_LINKS.map((link) => renderLink(link))}
             <button
               onClick={onContactClick}
               className="ml-2 px-7 py-2.5 bg-insaan-black text-white text-[15px] font-semibold rounded-full hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300"
@@ -93,17 +119,7 @@ export const H2Navbar: React.FC<H2NavbarProps> = ({ onContactClick }) => {
       {mobileOpen && (
         <div className="fixed inset-0 z-40 bg-insaan-bg flex flex-col pt-24 px-8 pb-12">
           <div className="flex-1 flex flex-col justify-center gap-2">
-            {NAV_LINKS.map((link, i) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="animate-menu-slide-in text-4xl font-bold text-insaan-black tracking-tight py-3"
-                style={{ animationDelay: `${i * 60}ms` }}
-              >
-                {link.label}
-              </a>
-            ))}
+            {NAV_LINKS.map((link) => renderLink(link, true))}
           </div>
           <button
             onClick={() => { setMobileOpen(false); onContactClick?.(); }}
