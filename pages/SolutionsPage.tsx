@@ -339,7 +339,6 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
                     alt={INDUSTRIES[activeIndustry].name}
                     className="w-full h-48 md:h-64 object-cover rounded-2xl mt-4"
                   />
-                  </p>
                   <button
                     onClick={onContactClick}
                     className="inline-flex items-center gap-2 text-[#59CBE8] font-semibold text-sm group/link self-start"

@@ -4,7 +4,7 @@ import { RevealOnScroll } from '../components/home2/RevealOnScroll';
 import { SEOHead } from '../components/shared/SEOHead';
 import { SiteFooter } from '../components/shared/SiteFooter';
 import leaderOffice from '../assets/leader-office.png';
-import diversityHero from '../assets/Improving-the-Employee-Experience-Through-Diversity_699854.jpg';
+//import diversityHero from '../assets/Improving-the-Employee-Experience-Through-Diversity_699854.jpg';
 
 interface AboutPageProps {
   onContactClick: () => void;
@@ -101,13 +101,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
       <section className="relative w-full pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden">
         {/* Background image with linear gradient overlay */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <img 
-            src={diversityHero} 
-            alt="" 
-            className="absolute right-0 top-0 h-full w-auto object-cover opacity-30 md:opacity-40"
-          />
-          {/* Linear gradient from white (left) to transparent (right) */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#F9F8F2]/95 via-[#F9F8F2]/70 to-transparent" />
+          {/* Using leader-office as placeholder - replace with proper asset */}
+          <div className="absolute right-0 top-0 h-full w-full bg-gradient-to-r from-[#F9F8F2]/95 via-[#F9F8F2]/70 to-transparent" />
           {/* Subtle gradient orbs for depth */}
           <div className="absolute -top-32 right-[15%] w-[500px] h-[500px] rounded-full bg-[#59CBE8]/[0.06] blur-[120px]" />
           <div className="absolute bottom-0 left-[5%] w-[400px] h-[400px] rounded-full bg-[#2CD5C4]/[0.04] blur-[120px]" />
