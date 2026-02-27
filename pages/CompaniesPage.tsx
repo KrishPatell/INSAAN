@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RevealOnScroll } from '../components/home2/RevealOnScroll';
 import { SEOHead } from '../components/shared/SEOHead';
-import { SiteFooter } from '../components/shared/SiteFooter';
+import { H2Footer } from '../components/home2/H2Footer';
 import coretechLogo from '../assets/coretech-logo.png';
 import bettermintLogo from '../assets/bettermint-logo.png';
 
@@ -511,7 +511,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
         </RevealOnScroll>
       </section>
 
-      <SiteFooter onContactClick={onContactClick} />
+      <H2Footer onContactClick={onContactClick} />
     </>
   );
 };

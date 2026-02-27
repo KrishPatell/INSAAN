@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RevealOnScroll } from '../components/home2/RevealOnScroll';
 import { SEOHead } from '../components/shared/SEOHead';
-import { SiteFooter } from '../components/shared/SiteFooter';
+import { H2Footer } from '../components/home2/H2Footer';
 import leaderOffice from '../assets/leader-office.png';
 //import diversityHero from '../assets/Improving-the-Employee-Experience-Through-Diversity_699854.jpg';
 
@@ -490,7 +490,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
         </RevealOnScroll>
       </section>
 
-      <SiteFooter onContactClick={onContactClick} />
+      <H2Footer onContactClick={onContactClick} />
     </>
   );
 };
