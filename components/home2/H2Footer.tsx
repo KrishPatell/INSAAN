@@ -40,8 +40,7 @@ export const H2Footer: React.FC<H2FooterProps> = ({ onContactClick }) => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="#about"
-                  onClick={(e) => handleLinkClick(e, '#about')}
+                  href="/about"
                   className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors"
                 >
                   About Us
@@ -49,11 +48,10 @@ export const H2Footer: React.FC<H2FooterProps> = ({ onContactClick }) => {
               </li>
               <li>
                 <a
-                  href="#services"
-                  onClick={(e) => handleLinkClick(e, '#services')}
+                  href="/solutions"
                   className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors"
                 >
-                  Services
+                  Solutions
                 </a>
               </li>
               <li>
