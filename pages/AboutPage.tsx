@@ -101,8 +101,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
       <section className="relative w-full pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden">
         {/* Background image with linear gradient overlay */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Using leader-office as placeholder - replace with proper asset */}
-          <div className="absolute right-0 top-0 h-full w-full bg-gradient-to-r from-[#F9F8F2]/95 via-[#F9F8F2]/70 to-transparent" />
+          <img 
+            src={leaderOffice} 
+            alt="" 
+            className="absolute right-0 top-0 h-full w-[80%] md:w-[70%] object-cover opacity-30 md:opacity-40"
+          />
+          <div className="absolute right-0 top-0 h-full w-[80%] md:w-[70%] bg-gradient-to-r from-[#F9F8F2]/95 via-[#F9F8F2]/70 to-transparent" />
           {/* Subtle gradient orbs for depth */}
           <div className="absolute -top-32 right-[15%] w-[500px] h-[500px] rounded-full bg-[#59CBE8]/[0.06] blur-[120px]" />
           <div className="absolute bottom-0 left-[5%] w-[400px] h-[400px] rounded-full bg-[#2CD5C4]/[0.04] blur-[120px]" />
@@ -130,6 +134,23 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
             <p className="max-w-2xl text-insaan-black/60 text-[15px] md:text-[17px] leading-relaxed font-medium">
               Insaan Global — translating to "Human Global" — is the parent company overseeing specialized workforce brands. The name reflects our core belief: people are the foundation of every successful operation, and talent, when properly aligned, drives measurable global impact.
             </p>
+          </RevealOnScroll>
+
+          <RevealOnScroll delay={200}>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 md:px-10 md:py-4 bg-insaan-black text-white text-[13.5px] md:text-[15px] font-bold rounded-xl md:rounded-2xl hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              >
+                Get in Touch
+              </Link>
+              <Link
+                to="/companies"
+                className="inline-flex items-center justify-center px-7 py-3.5 md:px-10 md:py-4 border-2 border-insaan-black/15 text-insaan-black text-[13.5px] md:text-[15px] font-bold rounded-xl md:rounded-2xl hover:border-insaan-black/30 bg-white/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Our Companies
+              </Link>
+            </div>
           </RevealOnScroll>
         </div>
       </section>

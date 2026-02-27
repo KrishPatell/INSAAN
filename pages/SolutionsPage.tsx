@@ -168,6 +168,19 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
               From a single temporary placement to enterprise-wide workforce management, Insaan Global delivers structured staffing solutions that keep your operations running at full capacity.
             </p>
           </RevealOnScroll>
+
+          <RevealOnScroll delay={200}>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <a
+                href="/company-presentation.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-7 py-3.5 md:px-10 md:py-4 bg-insaan-black text-white text-[13.5px] md:text-[15px] font-bold rounded-xl md:rounded-2xl hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              >
+                View Presentation
+              </a>
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
 
