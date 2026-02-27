@@ -30,7 +30,7 @@ const SERVICES = [
 
 export const H2Services: React.FC = () => {
   return (
-    <section id="industries" className="w-full bg-insaan-black text-white py-28 md:py-40 scroll-mt-24">
+    <section id="services" className="w-full bg-insaan-black text-white py-28 md:py-40 scroll-mt-24">
       <div className="max-w-content mx-auto px-4 md:px-8">
         {/* Section header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 md:mb-24">
