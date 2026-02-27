@@ -158,8 +158,9 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
           </RevealOnScroll>
 
           <RevealOnScroll delay={80}>
-            <h1 className="text-[36px] md:text-6xl lg:text-[4.8rem] font-bold text-insaan-black leading-[1] tracking-tightest mb-8 max-w-5xl">
-              Specialized brands,{' '}
+            <h1 className="text-[36px] md:text-6xl lg:text-[4.8rem] font-bold leading-[37px] md:leading-[1] tracking-tightest mb-8 max-w-5xl">
+              Specialized brands,
+              <br />
               <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">
                 one standard.
               </span>
@@ -167,9 +168,22 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
           </RevealOnScroll>
 
           <RevealOnScroll delay={160}>
-            <p className="max-w-2xl text-insaan-black/60 text-[15px] md:text-xl leading-relaxed font-medium">
+            <p className="max-w-2xl text-insaan-black/60 text-[15px] md:text-[17px] leading-relaxed font-medium">
               Each company under Insaan Global is purpose-built for its industry. Focused expertise means deeper talent pools, faster placements, and people who understand the work from day one.
             </p>
+          </RevealOnScroll>
+
+          <RevealOnScroll delay={220}>
+            <div className="mt-10">
+              <a
+                href="/company-presentation.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-7 py-3.5 md:px-8 md:py-4 border border-insaan-black/15 text-insaan-black text-[13.5px] md:text-[15px] font-bold rounded-xl md:rounded-2xl hover:border-insaan-black/30 hover:bg-insaan-black/5 transition-all duration-300 hover:-translate-y-0.5"
+              >
+                View Company Presentation
+              </a>
+            </div>
           </RevealOnScroll>
         </div>
       </section>
@@ -232,7 +246,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
 
           {/* 12 Sectors Grid */}
           <RevealOnScroll>
-            <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-white/30 mb-8">
+            <span className="inline-block text-[13px] font-semibold tracking-[0.2em] uppercase text-white mb-8">
               12 Industrial Sectors
             </span>
           </RevealOnScroll>
@@ -240,7 +254,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
             {CORETECH_SECTORS.map((sector, i) => (
               <RevealOnScroll key={i} delay={80 + i * 40}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] px-4 py-5 md:py-6 text-center transition-all duration-300 hover:bg-white/[0.07] hover:border-[#59CBE8]/20 group">
+                <div className="h-full min-h-[88px] rounded-2xl border border-white/[0.08] bg-white/[0.03] px-4 py-5 md:py-6 flex items-center justify-center text-center transition-all duration-300 hover:bg-white/[0.07] hover:border-[#59CBE8]/20 group">
                   <span className="text-sm md:text-[15px] font-semibold text-white/70 group-hover:text-white transition-colors">
                     {sector}
                   </span>
@@ -252,7 +266,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
       </section>
 
       {/* ═══════ BETTERMINT SECTION ═══════ */}
-      <section className="w-full py-28 md:py-40">
+      <section className="w-full py-24 md:py-36">
         <div className="max-w-content mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-16 md:mb-20">
             <div>
@@ -314,13 +328,15 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
               Service Areas
             </span>
           </RevealOnScroll>
-          <div className="flex flex-wrap gap-3">
+
+          <div className="flex flex-wrap gap-3 md:gap-4">
             {BETTERMINT_SERVICES.map((service, i) => (
-              <RevealOnScroll key={i} delay={80 + i * 50}>
-                <span className="px-5 py-3 rounded-full border border-insaan-black/10 bg-white text-insaan-black text-sm md:text-[15px] font-semibold transition-all duration-300 hover:border-[#2CD5C4]/40 hover:shadow-md hover:-translate-y-0.5">
-                  {service}
-                </span>
-              </RevealOnScroll>
+              <span
+                key={i}
+                className="px-5 py-3 rounded-full border border-insaan-black/10 bg-white text-insaan-black text-sm md:text-[15px] font-semibold transition-all duration-300 hover:border-[#2CD5C4]/40 hover:shadow-md hover:-translate-y-0.5"
+              >
+                {service}
+              </span>
             ))}
           </div>
         </div>
@@ -365,7 +381,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
             ].map((item, i) => (
               <RevealOnScroll key={i} delay={160 + i * 100}>
                 <div className="group rounded-3xl border border-white/[0.08] bg-white/[0.03] p-8 md:p-10 transition-all duration-500 hover:bg-white/[0.07] hover:border-white/20 hover:-translate-y-1 h-full">
-                  <span className="block text-[#59CBE8]/40 text-sm font-mono tracking-widest mb-6 group-hover:text-[#59CBE8]/70 transition-colors">
+                  <span className="block text-[#59CBE8]/40 text-sm md:text-[15px] font-mono font-medium tracking-widest mb-6 group-hover:text-[#59CBE8]/70 transition-colors">
                     {item.num}
                   </span>
                   <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-4">{item.title}</h3>
@@ -380,7 +396,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
       </section>
 
       {/* ═══════ FAQ ═══════ */}
-      <section className="w-full py-28 md:py-40">
+      <section className="w-full py-24 md:py-36">
         <div className="max-w-content mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
             {/* Left — Header */}
@@ -455,7 +471,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
       </section>
 
       {/* ═══════ CTA ═══════ */}
-      <section className="w-full px-4 md:px-8 py-28 md:py-40">
+      <section className="w-full px-4 md:px-8 py-24 md:py-36">
         <RevealOnScroll>
           <div className="relative max-w-[1100px] mx-auto rounded-3xl overflow-hidden bg-white border border-insaan-black/10 shadow-xl shadow-insaan-black/5">
             <div className="absolute inset-0 pointer-events-none">

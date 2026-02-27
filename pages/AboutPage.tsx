@@ -4,6 +4,7 @@ import { RevealOnScroll } from '../components/home2/RevealOnScroll';
 import { SEOHead } from '../components/shared/SEOHead';
 import { SiteFooter } from '../components/shared/SiteFooter';
 import leaderOffice from '../assets/leader-office.png';
+import diversityHero from '../assets/Improving-the-Employee-Experience-Through-Diversity_699854.jpg';
 
 interface AboutPageProps {
   onContactClick: () => void;
@@ -98,8 +99,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
 
       {/* ═══════ HERO ═══════ */}
       <section className="relative w-full pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden">
-        {/* Gradient orbs */}
+        {/* Background image with linear gradient overlay */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <img 
+            src={diversityHero} 
+            alt="" 
+            className="absolute right-0 top-0 h-full w-auto object-cover opacity-30 md:opacity-40"
+          />
+          {/* Linear gradient from white (left) to transparent (right) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F9F8F2]/95 via-[#F9F8F2]/70 to-transparent" />
+          {/* Subtle gradient orbs for depth */}
           <div className="absolute -top-32 right-[15%] w-[500px] h-[500px] rounded-full bg-[#59CBE8]/[0.06] blur-[120px]" />
           <div className="absolute bottom-0 left-[5%] w-[400px] h-[400px] rounded-full bg-[#2CD5C4]/[0.04] blur-[120px]" />
         </div>
@@ -113,8 +122,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
           </RevealOnScroll>
 
           <RevealOnScroll delay={80}>
-            <h1 className="text-[36px] md:text-6xl lg:text-[4.8rem] font-bold text-insaan-black leading-[1] tracking-tightest mb-8 max-w-5xl">
-              The right talent,{' '}
+            <h1 className="text-[36px] md:text-6xl lg:text-[4.8rem] font-bold leading-[37px] md:leading-[1] tracking-tightest mb-8 max-w-5xl">
+              The right talent,
+              <br className="hidden lg:block" />
               <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">
                 placed with purpose.
               </span>
@@ -122,7 +132,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
           </RevealOnScroll>
 
           <RevealOnScroll delay={160}>
-            <p className="max-w-2xl text-insaan-black/60 text-[15px] md:text-xl leading-relaxed font-medium">
+            <p className="max-w-2xl text-insaan-black/60 text-[15px] md:text-[17px] leading-relaxed font-medium">
               Insaan Global — translating to "Human Global" — is the parent company overseeing specialized workforce brands. The name reflects our core belief: people are the foundation of every successful operation, and talent, when properly aligned, drives measurable global impact.
             </p>
           </RevealOnScroll>
@@ -132,7 +142,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
       {/* ═══════ STATS BAR ═══════ */}
       <RevealOnScroll as="section" className="w-full bg-insaan-black py-12 md:py-16">
         <div className="max-w-content mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+          <div className="flex justify-between items-center gap-0 w-[85vw] max-w-full mx-auto">
             {STATS.map((stat, i) => (
               <RevealOnScroll key={i} delay={i * 80} className="text-center md:text-left">
                 <div className="text-3xl md:text-5xl font-bold text-white tracking-tightest mb-2">
@@ -148,7 +158,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
       </RevealOnScroll>
 
       {/* ═══════ OUR STORY ═══════ */}
-      <section className="w-full py-28 md:py-40">
+      <section className="w-full py-24 md:py-36">
         <div className="max-w-content mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             {/* Left — Image */}
@@ -268,7 +278,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
             {VALUES.map((value, i) => (
               <RevealOnScroll key={i} delay={160 + i * 100}>
                 <div className="group relative rounded-3xl border border-insaan-black/[0.06] bg-white p-8 md:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-insaan-black/[0.04] hover:-translate-y-1 h-full">
-                  <span className="block text-[#59CBE8]/50 text-sm font-mono tracking-widest mb-5 transition-colors duration-300 group-hover:text-[#59CBE8]/80">
+                  <span className="block text-[#4B727C]/50 text-[15px] font-semibold tracking-widest mb-5 transition-colors duration-300 group-hover:text-[#4B727C]/80">
                     {value.num}
                   </span>
                   <h3 className="text-xl md:text-2xl font-bold text-insaan-black tracking-tight mb-4">
@@ -349,7 +359,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
       </section>
 
       {/* ═══════ FAQ ═══════ */}
-      <section className="w-full py-28 md:py-40">
+      <section className="w-full py-24 md:py-36">
         <div className="max-w-content mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
             {/* Left — Header */}
@@ -424,7 +434,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
       </section>
 
       {/* ═══════ CTA ═══════ */}
-      <section className="w-full px-4 md:px-8 py-28 md:py-40">
+      <section className="w-full px-4 md:px-8 py-24 md:py-36">
         <RevealOnScroll>
           <div className="relative max-w-[1100px] mx-auto rounded-3xl overflow-hidden bg-white border border-insaan-black/10 shadow-xl shadow-insaan-black/5">
             <div className="absolute inset-0 pointer-events-none">

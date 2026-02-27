@@ -7,7 +7,7 @@ interface H2CTAProps {
 
 export const H2CTA: React.FC<H2CTAProps> = ({ onContactClick }) => {
   return (
-    <section className="w-full px-0 md:px-8 py-28 md:py-40">
+    <section className="w-full px-0 md:px-8 py-24 md:py-36">
       <RevealOnScroll>
         <div className="relative w-[90%] md:w-auto md:max-w-[1100px] mx-auto rounded-3xl overflow-hidden bg-white border border-insaan-black/10 shadow-xl shadow-insaan-black/5">
           {/* Gradient inside the card */}

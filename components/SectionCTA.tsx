@@ -6,7 +6,7 @@ interface SectionCTAProps {
 
 export const SectionCTA: React.FC<SectionCTAProps> = ({ onContactClick }) => {
   return (
-    <section className="w-full px-0 md:px-8 py-28 md:py-40">
+    <section className="w-full px-0 md:px-8 py-24 md:py-36">
       <div className="relative max-w-[1100px] mx-auto rounded-3xl overflow-hidden bg-white border border-insaan-black/10 shadow-xl shadow-insaan-black/5 section-reveal">
           {/* Gradient inside the card */}
           <div className="absolute inset-0 pointer-events-none">

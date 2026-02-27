@@ -112,10 +112,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onContactClick }) => {
               </RevealOnScroll>
 
               <RevealOnScroll delay={80}>
-                <h1 className="text-[36px] md:text-5xl lg:text-[3.8rem] font-bold text-insaan-black leading-[1] tracking-tightest mb-8">
+                <h1 className="text-[36px] md:text-5xl lg:text-[3.8rem] font-bold leading-[37px] md:leading-[1] tracking-tightest mb-8">
                   Let's talk about{' '}
                   <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">
-                    what you need.
+                    what<br className="md:hidden" /> you need.
                   </span>
                 </h1>
               </RevealOnScroll>
@@ -321,7 +321,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onContactClick }) => {
             {NEXT_STEPS.map((step, i) => (
               <RevealOnScroll key={i} delay={i * 100}>
                 <div className="group rounded-3xl border border-white/[0.08] bg-white/[0.03] p-8 transition-all duration-500 hover:bg-white/[0.07] hover:border-white/20 hover:-translate-y-1 h-full">
-                  <span className="block text-[#59CBE8]/40 text-sm font-mono tracking-widest mb-6 group-hover:text-[#59CBE8]/70 transition-colors">
+                  <span className="block text-[#59CBE8]/40 text-[15px] font-mono tracking-widest mb-6 group-hover:text-[#59CBE8]/70 transition-colors">
                     {step.num}
                   </span>
                   <h3 className="text-lg md:text-xl font-bold tracking-tight mb-3">{step.title}</h3>
@@ -336,7 +336,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onContactClick }) => {
       </section>
 
       {/* ═══════ FAQ ═══════ */}
-      <section className="w-full py-28 md:py-40">
+      <section className="w-full py-24 md:py-36">
         <div className="max-w-content mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
             {/* Left — Header */}

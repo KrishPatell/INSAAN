@@ -64,18 +64,18 @@ const ENTERPRISE_SOLUTIONS = [
 ];
 
 const INDUSTRIES = [
-  { name: 'Construction', roles: 'Carpenters, electricians, plumbers, equipment operators, general laborers' },
-  { name: 'Automotive', roles: 'Mechanics, assembly workers, quality inspectors, parts specialists' },
-  { name: 'Aviation & Airport Ops', roles: 'Ramp agents, baggage handlers, ground support' },
-  { name: 'Facilities & Maintenance', roles: 'HVAC techs, maintenance mechanics, building engineers' },
-  { name: 'Engineering', roles: 'CAD technicians, junior engineers, drafters' },
-  { name: 'Human Resources', roles: 'HR coordinators, recruiters, benefits administrators' },
-  { name: 'Industrial & Manufacturing', roles: 'Production workers, machine operators, QC inspectors' },
-  { name: 'IT Support', roles: 'Help desk, IT support, network technicians' },
-  { name: 'Office & Admin', roles: 'Data entry, office coordinators, admin assistants' },
-  { name: 'Sales', roles: 'Inside sales, account managers, sales coordinators' },
-  { name: 'Skilled Trades', roles: 'Welders, millwrights, pipefitters, HVAC specialists' },
-  { name: 'Transportation & Warehousing', roles: 'CDL drivers, forklift operators, warehouse associates' },
+  { name: 'Construction', roles: 'Carpenters, electricians, plumbers, equipment operators, general laborers', image: '/assets/stock-images-compressed/2026-02-27-19-28-00-construction-worker-usa.webp' },
+  { name: 'Automotive', roles: 'Mechanics, assembly workers, quality inspectors, parts specialists', image: '/assets/stock-images-compressed/2026-02-27-19-29-00-automotive-garage.webp' },
+  { name: 'Aviation & Airport Ops', roles: 'Ramp agents, baggage handlers, ground support', image: '/assets/stock-images-compressed/2026-02-27-19-30-00-aviation-airport.webp' },
+  { name: 'Facilities & Maintenance', roles: 'HVAC techs, maintenance mechanics, building engineers', image: '/assets/stock-images-compressed/2026-02-27-19-31-00-engineering.webp' },
+  { name: 'Engineering', roles: 'CAD technicians, junior engineers, drafters', image: '/assets/stock-images-compressed/2026-02-27-19-31-00-engineering.webp' },
+  { name: 'Human Resources', roles: 'HR coordinators, recruiters, benefits administrators', image: '/assets/stock-images-compressed/2026-02-27-19-32-00-human-resources.webp' },
+  { name: 'Industrial & Manufacturing', roles: 'Production workers, machine operators, QC inspectors', image: '/assets/stock-images-compressed/2026-02-27-19-33-00-industrial-it-support.webp' },
+  { name: 'IT Support', roles: 'Help desk, IT support, network technicians', image: '/assets/stock-images-compressed/2026-02-27-19-33-00-industrial-it-support.webp' },
+  { name: 'Office & Admin', roles: 'Data entry, office coordinators, admin assistants', image: '/assets/stock-images-compressed/2026-02-27-19-34-00-office-admin.webp' },
+  { name: 'Sales', roles: 'Inside sales, account managers, sales coordinators', image: '/assets/stock-images-compressed/2026-02-27-19-35-00-sales.webp' },
+  { name: 'Skilled Trades', roles: 'Welders, millwrights, pipefitters, HVAC specialists', image: '/assets/stock-images-compressed/2026-02-27-19-36-00-skilled-trades.webp' },
+  { name: 'Transportation & Warehousing', roles: 'CDL drivers, forklift operators, warehouse associates', image: '/assets/stock-images-compressed/2026-02-27-19-37-00-transport-warehousing.webp' },
 ];
 
 const PROCESS_STEPS = [
@@ -155,7 +155,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
           </RevealOnScroll>
 
           <RevealOnScroll delay={80}>
-            <h1 className="text-[36px] md:text-6xl lg:text-[4.8rem] font-bold text-insaan-black leading-[1] tracking-tightest mb-8 max-w-5xl">
+            <h1 className="text-[36px] md:text-6xl lg:text-[4.8rem] font-bold leading-[37px] md:leading-[1] tracking-tightest mb-8 max-w-5xl">
               The right solution for{' '}
               <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">
                 every workforce need.
@@ -164,7 +164,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
           </RevealOnScroll>
 
           <RevealOnScroll delay={160}>
-            <p className="max-w-2xl text-insaan-black/60 text-[15px] md:text-xl leading-relaxed font-medium">
+            <p className="max-w-2xl text-insaan-black/60 text-[15px] md:text-[17px] leading-relaxed font-medium">
               From a single temporary placement to enterprise-wide workforce management, Insaan Global delivers structured staffing solutions that keep your operations running at full capacity.
             </p>
           </RevealOnScroll>
@@ -188,11 +188,11 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
             {SERVICE_TYPES.map((service, i) => (
               <RevealOnScroll key={i} delay={i * 100}>
                 <div className="group rounded-3xl border border-white/[0.08] bg-white/[0.03] p-8 md:p-12 transition-all duration-500 hover:bg-white/[0.06] hover:border-white/15">
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     {/* Left — Info */}
                     <div className="lg:col-span-7">
                       <div className="flex items-center gap-4 mb-5">
-                        <span className="text-sm font-mono tracking-widest" style={{ color: `${service.accent}60` }}>
+                        <span className="text-[15px] font-mono tracking-widest" style={{ color: `${service.accent}60` }}>
                           {service.num}
                         </span>
                         <span className="text-xs font-semibold tracking-[0.15em] uppercase px-3 py-1 rounded-full border" style={{ borderColor: `${service.accent}30`, color: `${service.accent}` }}>
@@ -231,7 +231,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
       </section>
 
       {/* ═══════ ENTERPRISE SOLUTIONS ═══════ */}
-      <section className="w-full py-28 md:py-40">
+      <section className="w-full py-24 md:py-36">
         <div className="max-w-content mx-auto px-4 md:px-8">
           <RevealOnScroll>
             <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-insaan-black/40 mb-5">
@@ -330,8 +330,15 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
                   <p className="text-white/30 text-xs font-semibold tracking-[0.2em] uppercase mb-4">
                     Roles We Fill
                   </p>
-                  <p className="text-white/60 text-base md:text-lg leading-relaxed mb-10">
+                  <p className="text-white/60 text-base md:text-lg leading-relaxed mb-6">
                     {INDUSTRIES[activeIndustry].roles}
+                  </p>
+                  {/* Industry image */}
+                  <img 
+                    src={INDUSTRIES[activeIndustry].image} 
+                    alt={INDUSTRIES[activeIndustry].name}
+                    className="w-full h-48 md:h-64 object-cover rounded-2xl mt-4"
+                  />
                   </p>
                   <button
                     onClick={onContactClick}
@@ -393,7 +400,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
       </section>
 
       {/* ═══════ FAQ ═══════ */}
-      <section className="w-full py-28 md:py-40">
+      <section className="w-full py-24 md:py-36">
         <div className="max-w-content mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
             {/* Left — Header */}
@@ -468,7 +475,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
       </section>
 
       {/* ═══════ CTA ═══════ */}
-      <section className="w-full px-4 md:px-8 py-10 md:py-20 pb-28 md:pb-40">
+      <section className="w-full px-4 md:px-8 py-10 md:py-20 pb-24 md:pb-36">
         <RevealOnScroll>
           <div className="relative max-w-[1100px] mx-auto rounded-3xl overflow-hidden bg-white border border-insaan-black/10 shadow-xl shadow-insaan-black/5">
             <div className="absolute inset-0 pointer-events-none">
