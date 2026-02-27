@@ -40,10 +40,26 @@ export const H2Footer: React.FC<H2FooterProps> = ({ onContactClick }) => {
             <ul className="space-y-4">
               <li>
                 <a
+                  href="/"
+                  className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
                   href="/about"
                   className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors"
                 >
                   About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/companies"
+                  className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors"
+                >
+                  Companies
                 </a>
               </li>
               <li>
@@ -68,25 +84,9 @@ export const H2Footer: React.FC<H2FooterProps> = ({ onContactClick }) => {
           {/* Solutions links */}
           <div className="md:col-span-2">
             <h4 className="text-[15px] font-bold tracking-[0.5px] uppercase text-white/25 mb-6">
-              Solutions
+              Brands
             </h4>
             <ul className="space-y-4">
-              <li>
-                <a
-                  href="/companies"
-                  className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors"
-                >
-                  Companies
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/solutions"
-                  className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors"
-                >
-                  Solutions
-                </a>
-              </li>
               <li>
                 <a
                   href="#companies"

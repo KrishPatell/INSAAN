@@ -84,7 +84,7 @@ export const H2Companies: React.FC = () => {
                 </p>
 
                 {/* Link */}
-                <div className="flex items-center gap-2 text-insaan-black font-semibold text-[15px] group/link cursor-pointer mt-auto">
+                <a href="/companies" className="flex items-center gap-2 text-insaan-black font-semibold text-[15px] group/link cursor-pointer mt-auto">
                   <span className="border-b border-transparent group-hover/link:border-insaan-black transition-colors">
                     Visit Company
                   </span>
@@ -96,7 +96,7 @@ export const H2Companies: React.FC = () => {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </div>
+                </a>
               </div>
             </RevealOnScroll>
           ))}
