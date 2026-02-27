@@ -337,7 +337,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
                   <img 
                     src={INDUSTRIES[activeIndustry].image} 
                     alt={INDUSTRIES[activeIndustry].name}
-                    className="w-full h-48 md:h-64 object-cover rounded-2xl mt-4"
+                    className="w-full h-48 md:h-[400px] object-cover rounded-2xl mt-4 mb-6"
                   />
                   <button
                     onClick={onContactClick}
