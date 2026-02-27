@@ -9,7 +9,6 @@ interface SiteNavbarProps {
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
-  { label: 'Services', to: '#services', isAnchor: true },
   { label: 'Companies', to: '/companies' },
   { label: 'Solutions', to: '/solutions' },
 ];
