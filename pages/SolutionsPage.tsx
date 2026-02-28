@@ -529,7 +529,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
         </RevealOnScroll>
       </section>
 
-      <SiteFooter onContactClick={onContactClick} />
+      <H2Footer onContactClick={onContactClick} />
     </>
   );
 };

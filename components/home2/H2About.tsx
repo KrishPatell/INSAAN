@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { RevealOnScroll } from './RevealOnScroll';
-import leaderOffice from '../../assets/leader-office.png';
+import featureImg from '../../assets/FEATURE-IMG.png';
 
 interface H2AboutProps {
   onContactClick?: () => void;
@@ -78,7 +78,7 @@ export const H2About: React.FC<H2AboutProps> = ({ onContactClick }) => {
             <RevealOnScroll delay={200}>
               <div className="rounded-3xl overflow-hidden">
                 <img
-                  src={leaderOffice}
+                  src={featureImg}
                   alt="Insaan Global office"
                   className="w-full h-[350px] md:h-[480px] object-cover transition-all duration-700"
                 />

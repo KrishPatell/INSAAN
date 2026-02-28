@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { RevealOnScroll } from '../components/home2/RevealOnScroll';
 import { SEOHead } from '../components/shared/SEOHead';
-import { SiteFooter } from '../components/shared/SiteFooter';
+import { H2Footer } from '../components/home2/H2Footer';
 
 interface ContactPageProps {
   onContactClick: () => void;
@@ -410,7 +410,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onContactClick }) => {
         </div>
       </section>
 
-      <SiteFooter onContactClick={onContactClick} />
+      <H2Footer onContactClick={onContactClick} />
     </>
   );
 };
