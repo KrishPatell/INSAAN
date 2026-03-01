@@ -39,6 +39,11 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ onContactClick }) => {
                 </Link>
               </li>
               <li>
+                <Link to="/blog" className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors">
                   Contact Us
                 </Link>
@@ -126,6 +131,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ onContactClick }) => {
           <div className="flex gap-6 text-white/25">
             <Link to="/about" className="hover:text-white/50 transition-colors">About</Link>
             <Link to="/solutions" className="hover:text-white/50 transition-colors">Solutions</Link>
+            <Link to="/blog" className="hover:text-white/50 transition-colors">Blog</Link>
             <Link to="/contact" className="hover:text-white/50 transition-colors">Contact</Link>
           </div>
         </div>

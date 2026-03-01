@@ -6,6 +6,7 @@ interface SEOHeadProps {
   path: string;
   ogImage?: string;
   keywords?: string;
+  ogType?: 'website' | 'article';
 }
 
 const BASE_URL = 'https://www.insaanglobal.com';
@@ -16,6 +17,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   path,
   ogImage = `${BASE_URL}/assets/hero-world-map.webp`,
   keywords = 'workforce solutions, staffing, recruitment, Insaan Global',
+  ogType = 'website',
 }) => {
   useEffect(() => {
     document.title = title;
@@ -40,7 +42,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     setMeta('property', 'og:description', description);
     setMeta('property', 'og:url', canonical);
     setMeta('property', 'og:image', ogImage);
-    setMeta('property', 'og:type', 'website');
+    setMeta('property', 'og:type', ogType);
     setMeta('property', 'og:site_name', 'Insaan Global');
 
     // Twitter
@@ -57,7 +59,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       document.head.appendChild(link);
     }
     link.setAttribute('href', canonical);
-  }, [title, description, path, ogImage, keywords]);
+  }, [title, description, path, ogImage, keywords, ogType]);
 
   return null;
 };
