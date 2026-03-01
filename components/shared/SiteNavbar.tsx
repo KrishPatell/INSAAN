@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { label: 'About', to: '/about' },
   { label: 'Companies', to: '/companies' },
   { label: 'Solutions', to: '/solutions' },
+  { label: 'Blog', to: '/blog' },
 ];
 
 export const SiteNavbar: React.FC<SiteNavbarProps> = ({ onContactClick }) => {

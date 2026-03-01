@@ -17,6 +17,8 @@ import { AboutPage } from './pages/AboutPage';
 import { CompaniesPage } from './pages/CompaniesPage';
 import { SolutionsPage } from './pages/SolutionsPage';
 import { ContactPage } from './pages/ContactPage';
+import { BlogPage } from './pages/BlogPage';
+import { BlogPostPage } from './pages/BlogPostPage';
 
 /* ────────────── HOME PAGE (V2 design) ────────────── */
 
@@ -96,6 +98,22 @@ function App() {
           element={
             <InnerPage onContactClick={openModal}>
               {(oc) => <ContactPage onContactClick={oc} />}
+            </InnerPage>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <InnerPage onContactClick={openModal}>
+              {(oc) => <BlogPage onContactClick={oc} />}
+            </InnerPage>
+          }
+        />
+        <Route
+          path="/blog/:slug"
+          element={
+            <InnerPage onContactClick={openModal}>
+              {(oc) => <BlogPostPage onContactClick={oc} />}
             </InnerPage>
           }
         />
