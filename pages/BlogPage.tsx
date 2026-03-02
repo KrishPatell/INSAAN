@@ -76,7 +76,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onContactClick }) => {
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                   {/* Cover */}
-                  <div className={`relative h-[260px] md:h-[380px] lg:h-full min-h-[320px] bg-gradient-to-br ${featuredPost.coverGradient}`}>
+                  <div className={`relative h-[260px] md:h-[380px] lg:h-full min-h-[320px] ${featuredPost.coverImage ? '' : 'bg-gradient-to-br ' + featuredPost.coverGradient}`}>
+                    {featuredPost.coverImage && (
+                      <img src={featuredPost.coverImage} alt={featuredPost.title} className="w-full h-full object-cover" />
+                    )}
                     <div className="absolute top-6 left-6">
                       <span className={`inline-flex px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide border ${CATEGORY_COLORS[featuredPost.category].bg} ${CATEGORY_COLORS[featuredPost.category].text} ${CATEGORY_COLORS[featuredPost.category].border}`}>
                         {featuredPost.category}
@@ -185,7 +188,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onContactClick }) => {
                       className="group relative block rounded-3xl border border-insaan-black/[0.06] bg-white overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-insaan-black/[0.04] hover:-translate-y-1"
                     >
                       {/* Cover gradient */}
-                      <div className={`relative h-[200px] md:h-[220px] bg-gradient-to-br ${post.coverGradient}`}>
+                      <div className={`relative h-[200px] md:h-[220px] ${post.coverImage ? '' : 'bg-gradient-to-br ' + post.coverGradient}`}>
+                        {post.coverImage && (
+                          <img src={post.coverImage} alt={post.title} className="w-full h-full object-cover" />
+                        )}
                         <div className="absolute top-5 left-5">
                           <span className={`inline-flex px-3 py-1 rounded-full text-[11px] font-bold tracking-wide border ${colors.bg} ${colors.text} ${colors.border}`}>
                             {post.category}

@@ -35,6 +35,7 @@ export interface BlogPost {
   author: BlogAuthor;
   publishedDate: string;
   coverGradient: string;
+  coverImage?: string;
   content: ContentBlock[];
   tags: string[];
   featured?: boolean;
@@ -85,6 +86,7 @@ export const BLOG_POSTS: BlogPost[] = [
   /* ── POST 1 (Featured) ────────────────────────────────────── */
   {
     slug: 'the-hidden-cost-of-unfilled-positions',
+    coverImage: '/images/blog/blog1-unfilled-positions.webp',
     title: 'The Hidden Cost of Unfilled Positions in Industrial Operations',
     excerpt: 'Vacant roles do more than slow production. They erode morale, inflate overtime budgets, and compound quality issues that surface months down the line.',
     category: 'Workforce Insights',
@@ -121,6 +123,7 @@ export const BLOG_POSTS: BlogPost[] = [
   /* ── POST 2 ────────────────────────────────────────────────── */
   {
     slug: 'travel-nursing-trends-2026',
+    coverImage: '/images/blog/blog2-travel-nursing.webp',
     title: 'Travel Nursing in 2026: What Healthcare Facilities Need to Know',
     excerpt: 'The travel nursing market has matured well beyond pandemic-era spikes. Here is what facilities should understand about today\'s landscape and how to compete for top clinical talent.',
     category: 'Healthcare Staffing',
@@ -154,6 +157,7 @@ export const BLOG_POSTS: BlogPost[] = [
   /* ── POST 3 ────────────────────────────────────────────────── */
   {
     slug: 'insaan-global-launches-rapid-deploy',
+    coverImage: '/images/blog/blog3-rapid-deploy.webp',
     title: 'Insaan Global Launches Rapid Deploy Program for Emergency Staffing',
     excerpt: 'A new program designed to place pre-vetted industrial and healthcare workers within 24 to 48 hours of an emergency staffing request.',
     category: 'Company News',
@@ -186,6 +190,7 @@ export const BLOG_POSTS: BlogPost[] = [
   /* ── POST 4 ────────────────────────────────────────────────── */
   {
     slug: 'skilled-trades-gap-solutions',
+    coverImage: '/images/blog/blog4-skilled-trades.webp',
     title: 'Bridging the Skilled Trades Gap: Strategies That Actually Work',
     excerpt: 'The skilled trades shortage is not a future problem — it is today\'s reality. Here are practical strategies that leading companies are using to close the gap.',
     category: 'Industrial Solutions',
@@ -220,6 +225,7 @@ export const BLOG_POSTS: BlogPost[] = [
   /* ── POST 5 ────────────────────────────────────────────────── */
   {
     slug: 'ai-workforce-planning',
+    coverImage: '/images/blog/blog5-ai-workforce.webp',
     title: 'How AI Is Reshaping Workforce Planning Without Replacing People',
     excerpt: 'Artificial intelligence is transforming how companies forecast demand, match talent, and manage deployments — but the human element remains irreplaceable.',
     category: 'Industry Trends',

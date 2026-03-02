@@ -199,7 +199,15 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onContactClick }) =>
       <section className="w-full pb-4 md:pb-8">
         <div className="max-w-[900px] mx-auto px-4 md:px-8">
           <RevealOnScroll>
-            <div className={`w-full h-[220px] md:h-[400px] rounded-3xl bg-gradient-to-br ${post.coverGradient}`} />
+            {post.coverImage ? (
+              <img 
+                src={post.coverImage} 
+                alt={post.title}
+                className="w-full h-[220px] md:h-[400px] rounded-3xl object-cover"
+              />
+            ) : (
+              <div className={`w-full h-[220px] md:h-[400px] rounded-3xl bg-gradient-to-br ${post.coverGradient}`} />
+            )}
           </RevealOnScroll>
         </div>
       </section>
