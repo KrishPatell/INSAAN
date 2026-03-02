@@ -232,40 +232,42 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onContactClick }) => {
         </div>
       </section>
 
-      {/* ═══════ CTA ═══════ */}
-      <section className="w-full px-4 md:px-8 py-28 md:py-40">
+      {/* ═══════ CTA (Partner With Us) ═══════ */}
+      <section className="w-full px-4 md:px-8 py-24 md:py-36">
         <RevealOnScroll>
-          <div className="relative max-w-content mx-auto rounded-[32px] bg-white border border-insaan-black/[0.06] overflow-hidden px-6 md:px-16 py-20 md:py-28 text-center">
-            <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#59CBE8]/[0.04] blur-[100px]" />
-              <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-[#2CD5C4]/[0.03] blur-[100px]" />
+          <div className="relative max-w-[1100px] mx-auto rounded-3xl overflow-hidden bg-white border border-insaan-black/10 shadow-xl shadow-insaan-black/5">
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#59CBE8]/25 blur-3xl" />
+              <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-[#2CD5C4]/20 blur-3xl" />
             </div>
-            <div className="relative">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-insaan-black/10 bg-insaan-bg/50 backdrop-blur-sm text-xs font-semibold tracking-[0.15em] uppercase text-insaan-black/60 mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2CD5C4]" />
-                Stay Connected
+            <div className="relative px-6 md:px-20 py-14 md:py-20 flex flex-col items-center text-center">
+              <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-gray-700 border border-gray-300 bg-gray-100/90 mb-6">
+                Partner With Us
               </span>
-              <h2 className="text-[28px] md:text-4xl lg:text-5xl font-bold text-insaan-black leading-[1.05] tracking-tightest mb-6 max-w-3xl mx-auto">
-                Want workforce insights{' '}
+              <h2 className="text-[34px] md:text-5xl lg:text-[4rem] font-bold text-insaan-black leading-[1] tracking-tightest mb-4">
+                Find the talent{' '}
                 <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">
-                  delivered to you?
+                  your operation needs.
                 </span>
               </h2>
-              <p className="text-insaan-black/50 text-[15px] md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-                Get in touch with our team to discuss workforce strategies tailored to your industry and operational needs.
+              <p className="text-gray-600 text-[14px] md:text-lg leading-relaxed max-w-[600px] mb-10">
+                Whether it's industrial staffing through CORETech or healthcare professionals through Bettermint, we deliver talent that performs.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={onContactClick}
-                  className="px-8 py-4 bg-insaan-black text-white text-[15px] font-bold rounded-full hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-insaan-black text-white rounded-2xl font-bold text-[15px] hover:bg-[#59CBE8] hover:text-insaan-black transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
                   Get in Touch
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
                 </button>
                 <Link
                   to="/solutions"
-                  className="px-8 py-4 border border-insaan-black/10 text-insaan-black text-[15px] font-bold rounded-full hover:border-insaan-black/20 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-insaan-black/15 text-insaan-black text-[15px] font-bold rounded-2xl hover:border-insaan-black/30 hover:bg-insaan-black/5 transition-all duration-300"
                 >
-                  View Solutions
+                  Explore Solutions
                 </Link>
               </div>
             </div>

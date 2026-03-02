@@ -29,8 +29,18 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ onContactClick }) => {
             </h4>
             <ul className="space-y-4">
               <li>
+                <Link to="/" className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
                 <Link to="/about" className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors">
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/companies" className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors">
+                  Companies
                 </Link>
               </li>
               <li>
@@ -127,12 +137,6 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ onContactClick }) => {
                 Blitz Studio
               </a>
             </span>
-          </div>
-          <div className="flex gap-6 text-white/25">
-            <Link to="/about" className="hover:text-white/50 transition-colors">About</Link>
-            <Link to="/solutions" className="hover:text-white/50 transition-colors">Solutions</Link>
-            <Link to="/blog" className="hover:text-white/50 transition-colors">Blog</Link>
-            <Link to="/contact" className="hover:text-white/50 transition-colors">Contact</Link>
           </div>
         </div>
       </div>

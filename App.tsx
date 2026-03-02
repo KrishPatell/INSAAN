@@ -41,6 +41,20 @@ const HomePage: React.FC<{ onContactClick: () => void }> = ({ onContactClick }) 
   </>
 );
 
+/* ────────────── INNER PAGE WRAPPER (BLOG) ────────────── */
+
+interface InnerPageProps {
+  children: (onContactClick: () => void) => React.ReactNode;
+  onContactClick: () => void;
+}
+
+const InnerPage: React.FC<InnerPageProps> = ({ children, onContactClick }) => (
+  <>
+    <SiteNavbar onContactClick={onContactClick} />
+    {children(onContactClick)}
+  </>
+);
+
 /* ────────────── APP ────────────── */
 
 function App() {
