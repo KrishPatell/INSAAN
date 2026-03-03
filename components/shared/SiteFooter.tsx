@@ -49,8 +49,8 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ onContactClick }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors">
-                  Blog
+                <Link to="/insights" className="text-[15px] md:text-[17px] font-medium text-white/50 hover:text-white transition-colors">
+                  Insights
                 </Link>
               </li>
               <li>

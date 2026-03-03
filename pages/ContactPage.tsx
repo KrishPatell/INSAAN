@@ -40,7 +40,7 @@ const FAQ = [
   },
   {
     q: 'What industries do you serve?',
-    a: 'Through CORETech, we staff 12 industrial sectors including construction, manufacturing, skilled trades, and transportation. Through Bettermint, we support healthcare facilities with travel nurses and allied health professionals.',
+    a: 'Through CORETech, we staff 12+ industrial sectors including construction, manufacturing, skilled trades, and transportation. Through Bettermint, we support healthcare facilities with travel nurses and allied health professionals.',
   },
   {
     q: 'Do you handle certifications and compliance?',

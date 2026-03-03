@@ -13,7 +13,7 @@ interface AboutPageProps {
 /* ──────────────────────────── DATA ──────────────────────────── */
 
 const STATS = [
-  { value: '12', label: 'Industries Served' },
+  { value: '12+', label: 'Industries Served' },
   { value: '2', label: 'Specialized Brands' },
   { value: '48hr', label: 'Avg. Placement Speed' },
   { value: '100%', label: 'Safety Compliance' },
@@ -56,7 +56,7 @@ const TIMELINE = [
   {
     year: 'Today',
     title: 'Serving Essential Industries Worldwide',
-    text: 'Across 12 industrial sectors, Insaan Global brands connect skilled professionals with the organizations that need them — placing talent that drives measurable performance.',
+    text: 'Across 12+ industrial sectors, Insaan Global brands connect skilled professionals with the organizations that need them — placing talent that drives measurable performance.',
   },
 ];
 
@@ -71,7 +71,7 @@ const ABOUT_FAQ = [
   },
   {
     q: 'What industries does Insaan Global serve?',
-    a: 'Through CORETech, we staff 12 industrial sectors including construction, manufacturing, skilled trades, engineering, automotive, aviation, and transportation. Through Bettermint Healthcare, we support healthcare facilities with travel nurses and allied health professionals.',
+    a: 'Through CORETech, we staff 12+ industrial sectors including construction, manufacturing, skilled trades, engineering, automotive, aviation, and transportation. Through Bettermint Healthcare, we support healthcare facilities with travel nurses and allied health professionals.',
   },
   {
     q: 'How do CORETech and Bettermint work together?',
@@ -92,7 +92,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
     <>
       <SEOHead
         title="About Us — Insaan Global | Workforce Solutions Built on Understanding"
-        description="Insaan Global is the parent company behind CORETech and Bettermint Healthcare. We deliver structured workforce solutions across 12 industries, grounded in operational understanding and a people-first approach."
+        description="Insaan Global is the parent company behind CORETech and Bettermint Healthcare. We deliver structured workforce solutions across 12+ industries, grounded in operational understanding and a people-first approach."
         path="/about"
         keywords="about Insaan Global, workforce solutions company, staffing parent company, CORETech, Bettermint Healthcare, industrial staffing, healthcare staffing"
       />

@@ -13,7 +13,7 @@ import {
 } from '../data/blogPosts';
 
 /* ═══════════════════════════════════════════════════════════════
-   BLOG POST PAGE — /blog/:slug
+   INSIGHTS POST PAGE — /insights/:slug
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─── Content Block Renderer ─────────────────────────────────── */
@@ -126,7 +126,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onContactClick }) =>
   const { slug } = useParams<{ slug: string }>();
   const post = BLOG_POSTS.find((p) => p.slug === slug);
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!post) return <Navigate to="/insights" replace />;
 
   const readTime = calculateReadTime(post.content);
   const colors = CATEGORY_COLORS[post.category];
@@ -135,9 +135,9 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onContactClick }) =>
   return (
     <>
       <SEOHead
-        title={`${post.title} — Insaan Global Blog`}
+        title={`${post.title} — Insaan Global Insights`}
         description={post.excerpt}
-        path={`/blog/${post.slug}`}
+        path={`/insights/${post.slug}`}
         keywords={post.tags.join(', ')}
         ogType="article"
       />
@@ -152,13 +152,13 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onContactClick }) =>
           {/* Back link */}
           <RevealOnScroll>
             <Link
-              to="/blog"
+              to="/insights"
               className="inline-flex items-center gap-2 text-insaan-black/40 text-sm font-semibold hover:text-insaan-black/70 transition-colors mb-8 group"
             >
               <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
               </svg>
-              Back to Blog
+              Back to Insights
             </Link>
           </RevealOnScroll>
 
@@ -273,9 +273,9 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onContactClick }) =>
                 Keep Reading
               </span>
               <h2 className="text-[28px] md:text-4xl lg:text-5xl font-bold leading-[1.05] tracking-tightest mb-14 md:mb-20">
-                More from the{' '}
+                More insights from{' '}
                 <span className="bg-gradient-to-r from-[#59CBE8] to-[#2CD5C4] bg-clip-text text-transparent">
-                  blog.
+                  Insaan Global.
                 </span>
               </h2>
             </RevealOnScroll>
@@ -286,7 +286,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onContactClick }) =>
                 return (
                   <RevealOnScroll key={rp.slug} delay={i * 100}>
                     <Link
-                      to={`/blog/${rp.slug}`}
+                      to={`/insights/${rp.slug}`}
                       className="group block rounded-3xl border border-white/[0.08] bg-white/[0.03] overflow-hidden transition-all duration-500 hover:bg-white/[0.06] hover:-translate-y-1"
                     >
                       <div className={`h-[180px] md:h-[200px] bg-gradient-to-br ${rp.coverGradient} opacity-80`} />

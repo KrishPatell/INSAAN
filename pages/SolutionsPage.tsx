@@ -134,7 +134,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
     <>
       <SEOHead
         title="Solutions — Workforce Staffing Services | Insaan Global"
-        description="Temporary staffing, temp-to-hire, permanent placement, and contract workers across 12 industrial sectors. RPO, MSP, and VMS solutions for enterprise workforce management."
+        description="Temporary staffing, temp-to-hire, permanent placement, and contract workers across 12+ industrial sectors. RPO, MSP, and VMS solutions for enterprise workforce management."
         path="/solutions"
         keywords="temporary staffing, temp to hire, permanent placement, contract workers, RPO, MSP, VMS, workforce solutions, industrial staffing, construction staffing, manufacturing staffing"
       />
@@ -294,7 +294,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
                 Industries
               </span>
               <h2 className="text-[32px] md:text-5xl lg:text-[3.8rem] font-bold leading-[1] tracking-tightest max-w-4xl">
-                12 sectors.{' '}
+                12+ sectors.{' '}
                 <span className="text-[#59CBE8]">Thousands of placements.</span>
               </h2>
             </RevealOnScroll>
@@ -335,7 +335,7 @@ export const SolutionsPage: React.FC<SolutionsPageProps> = ({ onContactClick }) 
               <RevealOnScroll delay={200}>
                 <div className="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-8 md:p-12 h-full flex flex-col justify-center min-h-[300px]">
                   <span className="text-[#59CBE8]/50 text-sm font-mono tracking-widest mb-4">
-                    {String(activeIndustry + 1).padStart(2, '0')} / 12
+                    {String(activeIndustry + 1).padStart(2, '0')} / 12+
                   </span>
                   <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
                     {INDUSTRIES[activeIndustry].name}

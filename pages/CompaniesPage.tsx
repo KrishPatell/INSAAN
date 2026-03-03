@@ -108,7 +108,7 @@ const BETTERMINT_DIFFERENTIATORS = [
 const COMPANIES_FAQ = [
   {
     q: 'What\'s the difference between CORETech and Bettermint?',
-    a: 'CORETech focuses on industrial staffing across 12 sectors — construction, manufacturing, skilled trades, automotive, and more. Bettermint Healthcare specializes in travel nursing and allied health professional placement. Each brand has dedicated recruiters who understand the specific demands of their industry.',
+    a: 'CORETech focuses on industrial staffing across 12+ sectors — construction, manufacturing, skilled trades, automotive, and more. Bettermint Healthcare specializes in travel nursing and allied health professional placement. Each brand has dedicated recruiters who understand the specific demands of their industry.',
   },
   {
     q: 'What certifications does CORETech verify?',
@@ -124,7 +124,7 @@ const COMPANIES_FAQ = [
   },
   {
     q: 'What types of positions does CORETech fill?',
-    a: 'CORETech fills temporary (1-12 weeks), temp-to-hire, permanent, and contract (3-12 months) positions across all 12 industrial sectors — from general laborers and machine operators to skilled tradespeople, technicians, and supervisors.',
+    a: 'CORETech fills temporary (1-12 weeks), temp-to-hire, permanent, and contract (3-12 months) positions across 12+ industrial sectors — from general laborers and machine operators to skilled tradespeople, technicians, and supervisors.',
   },
 ];
 
@@ -137,7 +137,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
     <>
       <SEOHead
         title="Our Companies — CORETech & Bettermint Healthcare | Insaan Global"
-        description="Insaan Global operates two specialized workforce brands: CORETech for industrial staffing across 12 sectors, and Bettermint Healthcare for travel nursing and allied health professionals."
+        description="Insaan Global operates two specialized workforce brands: CORETech for industrial staffing across 12+ sectors, and Bettermint Healthcare for travel nursing and allied health professionals."
         path="/companies"
         keywords="CORETech staffing, Bettermint Healthcare, industrial staffing, healthcare staffing, travel nursing, workforce brands, Insaan Global companies"
       />
@@ -216,7 +216,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
 
               <RevealOnScroll delay={160}>
                 <p className="text-white/50 text-base md:text-lg leading-relaxed mb-6">
-                  CORETech connects employers — construction sites, manufacturing plants, warehouses, automotive facilities — with skilled workers for temporary, contract, and permanent positions across 12 industrial sectors.
+                  CORETech connects employers — construction sites, manufacturing plants, warehouses, automotive facilities — with skilled workers for temporary, contract, and permanent positions across 12+ industrial sectors.
                 </p>
                 <p className="text-white/50 text-base md:text-lg leading-relaxed">
                   We don't send warm bodies. We learn how your facility operates, understand your production requirements, and match workers to your operational needs. Every candidate is screened for safety compliance and verified for industry certifications.
@@ -244,10 +244,10 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({ onContactClick }) 
             </div>
           </div>
 
-          {/* 12 Sectors Grid */}
+          {/* 12+ Sectors Grid */}
           <RevealOnScroll>
             <span className="inline-block text-[13px] font-semibold tracking-[0.2em] uppercase text-white mb-8">
-              12 Industrial Sectors
+              12+ industrial sectors
             </span>
           </RevealOnScroll>
 

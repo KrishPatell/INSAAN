@@ -13,7 +13,7 @@ import {
 } from '../data/blogPosts';
 
 /* ═══════════════════════════════════════════════════════════════
-   BLOG HUB PAGE — /blog
+   INSIGHTS HUB PAGE — /insights
    ═══════════════════════════════════════════════════════════════ */
 
 interface BlogPageProps { onContactClick: () => void }
@@ -29,10 +29,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onContactClick }) => {
   return (
     <>
       <SEOHead
-        title="Blog — Insaan Global | Workforce Insights, Staffing Trends & Industry News"
+        title="Insights — Insaan Global | Workforce Insights, Staffing Trends & Industry News"
         description="Expert insights on workforce strategy, staffing trends, healthcare staffing, and industrial solutions from the Insaan Global team."
-        path="/blog"
-        keywords="workforce blog, staffing insights, healthcare staffing trends, industrial workforce, talent acquisition, Insaan Global blog"
+        path="/insights"
+        keywords="workforce insights, staffing insights, healthcare staffing trends, industrial workforce, talent acquisition, Insaan Global insights"
       />
 
       {/* ═══════ HERO ═══════ */}
@@ -71,7 +71,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onContactClick }) => {
           <div className="max-w-content mx-auto px-4 md:px-8">
             <RevealOnScroll>
               <Link
-                to={`/blog/${featuredPost.slug}`}
+                to={`/insights/${featuredPost.slug}`}
                 className="group block rounded-3xl border border-insaan-black/[0.06] bg-white overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-insaan-black/[0.06] hover:-translate-y-1"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -184,7 +184,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onContactClick }) => {
                 return (
                   <RevealOnScroll key={post.slug} delay={i * 100}>
                     <Link
-                      to={`/blog/${post.slug}`}
+                      to={`/insights/${post.slug}`}
                       className="group relative block rounded-3xl border border-insaan-black/[0.06] bg-white overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-insaan-black/[0.04] hover:-translate-y-1"
                     >
                       {/* Cover gradient */}

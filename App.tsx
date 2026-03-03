@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
 import { SiteNavbar } from './components/shared/SiteNavbar';
 import { H2Hero } from './components/home2/H2Hero';
 import { H2Marquee } from './components/home2/H2Marquee';
@@ -54,6 +54,13 @@ const InnerPage: React.FC<InnerPageProps> = ({ children, onContactClick }) => (
     {children(onContactClick)}
   </>
 );
+
+/* ────────────── LEGACY BLOG → INSIGHTS REDIRECTS ────────────── */
+
+const BlogPostRedirect: React.FC = () => {
+  const { slug } = useParams<{ slug: string }>();
+  return <Navigate to={slug ? `/insights/${slug}` : '/insights'} replace />;
+};
 
 /* ────────────── APP ────────────── */
 
@@ -113,7 +120,7 @@ function App() {
           }
         />
         <Route
-          path="/blog"
+          path="/insights"
           element={
             <InnerPage onContactClick={openModal}>
               {(oc) => <BlogPage onContactClick={oc} />}
@@ -121,13 +128,16 @@ function App() {
           }
         />
         <Route
-          path="/blog/:slug"
+          path="/insights/:slug"
           element={
             <InnerPage onContactClick={openModal}>
               {(oc) => <BlogPostPage onContactClick={oc} />}
             </InnerPage>
           }
         />
+        {/* Legacy blog URLs → redirect to insights */}
+        <Route path="/blog" element={<Navigate to="/insights" replace />} />
+        <Route path="/blog/:slug" element={<BlogPostRedirect />} />
       </Routes>
       <ContactModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
