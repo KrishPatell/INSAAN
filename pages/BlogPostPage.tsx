@@ -251,7 +251,6 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onContactClick }) =>
               </div>
               <div>
                 <h4 className="text-xl font-bold text-insaan-black mb-1">{post.author.name}</h4>
-                <p className="text-insaan-black/40 text-sm font-semibold mb-3">{post.author.role}</p>
                 <p className="text-insaan-black/55 text-[15px] leading-relaxed">
                   {post.author.name} brings years of experience in workforce strategy
                   and operations to Insaan Global, helping organizations build stronger
