@@ -241,27 +241,6 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onContactClick }) =>
         </div>
       </section>
 
-      {/* ═══════ AUTHOR BIO ═══════ */}
-      <section className="w-full pb-20 md:pb-28">
-        <div className="max-w-[720px] mx-auto px-4 md:px-8">
-          <RevealOnScroll>
-            <div className="rounded-3xl border border-insaan-black/[0.06] bg-white p-8 md:p-10 flex flex-col sm:flex-row items-start gap-6">
-              <div aria-hidden="true" className={`w-16 h-16 rounded-full bg-gradient-to-br ${post.author.avatarGradient} flex items-center justify-center text-white text-lg font-bold shrink-0`}>
-                {post.author.initials}
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-insaan-black mb-1">{post.author.name}</h4>
-                <p className="text-insaan-black/55 text-[15px] leading-relaxed">
-                  {post.author.name} brings years of experience in workforce strategy
-                  and operations to Insaan Global, helping organizations build stronger
-                  teams through data-driven staffing solutions.
-                </p>
-              </div>
-            </div>
-          </RevealOnScroll>
-        </div>
-      </section>
-
       {/* ═══════ RELATED POSTS (dark) ═══════ */}
       {related.length > 0 && (
         <section className="w-full bg-insaan-black text-white py-28 md:py-40">
