@@ -77,7 +77,7 @@ export function formatDate(iso: string): string {
 
 // ─── AUTHORS ────────────────────────────────────────────────────
 
-const SARAH: BlogAuthor = { name: 'Ari Hassan', role: 'Director of Workforce Strategy', initials: 'SK', avatarGradient: 'from-[#59CBE8] to-[#2CD5C4]' };
+const SARAH: BlogAuthor = { name: 'Ari Hassan', role: 'VP of Operations', initials: 'SK', avatarGradient: 'from-[#59CBE8] to-[#2CD5C4]' };
 const MARCUS: BlogAuthor = { name: 'Ari Hassan', role: 'VP of Operations', initials: 'MC', avatarGradient: 'from-[#2CD5C4] to-[#59CBE8]' };
 
 // ─── BLOG POSTS ─────────────────────────────────────────────────
@@ -111,7 +111,7 @@ export const BLOG_POSTS: BlogPost[] = [
       ]},
       { type: 'heading', level: 2, text: 'Why Traditional Hiring Cannot Keep Up' },
       { type: 'paragraph', text: 'The average time-to-fill for a skilled industrial position is 42 days. In sectors like energy and aerospace, where certifications and clearances add complexity, that number stretches past 60. During that window, every day compounds the losses outlined above.' },
-      { type: 'quote', text: 'The companies that win are the ones that treat staffing as infrastructure, not as a reaction to problems.', attribution: 'Ari Hassan, Director of Workforce Strategy at Insaan Global' },
+      { type: 'quote', text: 'The companies that win are the ones that treat staffing as infrastructure, not as a reaction to problems.', attribution: 'Ari Hassan, VP of Operations at Insaan Global' },
       { type: 'heading', level: 2, text: 'Building a Proactive Staffing Strategy' },
       { type: 'paragraph', text: 'The fix is not simply hiring faster. It is building a staffing model that anticipates demand before it becomes urgent. At Insaan Global, our CORETech division maintains pre-vetted talent pools across 12 industrial sectors. When a client needs three certified pipefitters by Monday, we do not start sourcing on Friday — the candidates are already in our pipeline, screened, verified, and ready.' },
       { type: 'paragraph', text: 'This is the difference between reactive staffing and strategic workforce planning. One treats people as a line item. The other treats them as infrastructure — because that is exactly what they are.' },
@@ -179,7 +179,7 @@ export const BLOG_POSTS: BlogPost[] = [
       ]},
       { type: 'heading', level: 2, text: 'The Talent Pool Behind the Program' },
       { type: 'paragraph', text: 'Rapid Deploy is powered by a standing pool of over 2,000 pre-qualified workers across both divisions. These are not passive candidates sitting in a database. They are active professionals who have opted into the Rapid Deploy network, confirmed their availability windows, and maintained current certifications and compliance documentation.' },
-      { type: 'quote', text: 'Speed without quality is just chaos. Rapid Deploy delivers both because the vetting happens before the emergency, not during it.', attribution: 'Ari Hassan, Director of Workforce Strategy at Insaan Global' },
+      { type: 'quote', text: 'Speed without quality is just chaos. Rapid Deploy delivers both because the vetting happens before the emergency, not during it.', attribution: 'Ari Hassan, VP of Operations at Insaan Global' },
       { type: 'heading', level: 2, text: 'Sectors Covered' },
       { type: 'paragraph', text: 'On the industrial side, Rapid Deploy covers manufacturing, construction, energy, oil and gas, aerospace, logistics, and marine operations. On the healthcare side, coverage includes registered nurses, licensed practical nurses, certified nursing assistants, allied health professionals, and specialized clinical roles.' },
       { type: 'heading', level: 3, text: 'Getting Started' },
@@ -251,7 +251,7 @@ export const BLOG_POSTS: BlogPost[] = [
         'Handling edge cases and novel situations that fall outside training data patterns',
         'Building trust with candidates — people want to talk to people about their careers',
       ]},
-      { type: 'quote', text: 'AI gives us better data faster. But the decision about whether to place a person in a role — that is still fundamentally a human judgment, and it should stay that way.', attribution: 'Ari Hassan, Director of Workforce Strategy at Insaan Global' },
+      { type: 'quote', text: 'AI gives us better data faster. But the decision about whether to place a person in a role — that is still fundamentally a human judgment, and it should stay that way.', attribution: 'Ari Hassan, VP of Operations at Insaan Global' },
       { type: 'heading', level: 2, text: 'How Insaan Global Uses AI Responsibly' },
       { type: 'paragraph', text: 'At Insaan Global, we use AI tools to accelerate candidate identification, improve demand forecasting for our clients, and optimize deployment logistics. But every placement decision is made by an experienced recruiter who knows the client, understands the role context, and has spoken directly with the candidate. Technology handles the scale. People handle the judgment.' },
       { type: 'heading', level: 3, text: 'The Human-First Approach' },
