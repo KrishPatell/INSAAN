@@ -28,6 +28,7 @@ const HomePage: React.FC<{ onContactClick: () => void }> = ({ onContactClick }) 
       description="Insaan Global provides workforce solutions across healthcare, engineering, construction, energy, and aerospace. Connecting high-quality talent with companies worldwide."
       path="/"
       keywords="workforce solutions, staffing, recruitment, healthcare staffing, engineering staffing, construction staffing, aerospace staffing, energy staffing, talent acquisition, workforce management, Insaan Global"
+      includeSchema={true}
     />
     <SiteNavbar onContactClick={onContactClick} />
     <H2Hero onContactClick={onContactClick} />
