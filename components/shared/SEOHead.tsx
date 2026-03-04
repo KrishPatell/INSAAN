@@ -120,6 +120,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
 
     setMeta('name', 'description', description);
     setMeta('name', 'keywords', keywords);
+    
+    // Google Site Verification
+    setMeta('name', 'google-site-verification', '6bk6mej9UlAYu7J4p51fn4kxKX3cAty4gJVguHClljw');
 
     // Open Graph
     setMeta('property', 'og:title', title);
