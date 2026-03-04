@@ -24,10 +24,11 @@ import { BlogPostPage } from './pages/BlogPostPage';
 const HomePage: React.FC<{ onContactClick: () => void }> = ({ onContactClick }) => (
   <>
     <SEOHead
-      title="Insaan Global — Workforce Solutions | Healthcare, Engineering, Construction & Aerospace Staffing"
-      description="Insaan Global provides workforce solutions across healthcare, engineering, construction, energy, and aerospace. Connecting high-quality talent with companies worldwide."
+      title="Insaan Global | Healthcare & Industrial Staffing Solutions"
+      description="Parent company overseeing specialized workforce solution brands. Connecting employers with qualified healthcare and industrial talent nationwide through BetterMint and CORETech."
       path="/"
-      keywords="workforce solutions, staffing, recruitment, healthcare staffing, engineering staffing, construction staffing, aerospace staffing, energy staffing, talent acquisition, workforce management, Insaan Global"
+      keywords="workforce solutions, staffing, recruitment, healthcare staffing, industrial staffing, BetterMint, CORETech, Insaan Global"
+      ogImage="https://www.insaanglobal.com/assets/hero-world-map.webp"
       includeSchema={true}
     />
     <SiteNavbar onContactClick={onContactClick} />

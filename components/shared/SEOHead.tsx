@@ -80,6 +80,20 @@ const ORGANIZATION_SCHEMA = {
   ]
 };
 
+// Breadcrumb Schema
+const BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.insaanglobal.com"
+    }
+  ]
+};
+
 export const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
@@ -146,6 +160,12 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       orgScript.type = 'application/ld+json';
       orgScript.textContent = JSON.stringify(ORGANIZATION_SCHEMA);
       document.head.appendChild(orgScript);
+      
+      // Add Breadcrumb Schema
+      const breadcrumbScript = document.createElement('script');
+      breadcrumbScript.type = 'application/ld+json';
+      breadcrumbScript.textContent = JSON.stringify(BREADCRUMB_SCHEMA);
+      document.head.appendChild(breadcrumbScript);
     }
   }, [title, description, path, ogImage, keywords, ogType, includeSchema]);
 
