@@ -12,12 +12,7 @@ interface AboutPageProps {
 
 /* ──────────────────────────── DATA ──────────────────────────── */
 
-const STATS = [
-  { value: '12+', label: 'Industries Served' },
-  { value: '2', label: 'Specialized Brands' },
-  { value: '48hr', label: 'Avg. Placement Speed' },
-  { value: '100%', label: 'Safety Compliance' },
-];
+
 
 const VALUES = [
   {
@@ -155,23 +150,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onContactClick }) => {
         </div>
       </section>
 
-      {/* ═══════ STATS BAR ═══════ */}
-      <RevealOnScroll as="section" className="w-full bg-insaan-black py-12 md:py-16">
-        <div className="max-w-content mx-auto px-4 md:px-8">
-          <div className="flex justify-between items-center gap-0 w-[85vw] max-w-full mx-auto">
-            {STATS.map((stat, i) => (
-              <RevealOnScroll key={i} delay={i * 80} className="text-center md:text-left">
-                <div className="text-3xl md:text-5xl font-bold text-white tracking-tightest mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-white/40 text-sm md:text-base font-medium">
-                  {stat.label}
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
-        </div>
-      </RevealOnScroll>
+
 
       {/* ═══════ OUR STORY ═══════ */}
       <section className="w-full py-24 md:py-36">
